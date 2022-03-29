@@ -1,6 +1,6 @@
 const { Model, DataTypes, INTEGER } = require('sequelize');
-const sequelize = require('../server');
-//should we  have a ..config/connection.js file? where sequelize is modularized and we can help protect passwords w .env file
+const sequelize = require('../config/connection');
+
 class Post extends Model {};
 
 Post.init(
@@ -19,7 +19,7 @@ Post.init(
         type: DataTypes.STRING,
         allowNull: false
        },
-       due_date: {
+       deadline: {
            type: DataTypes.DATE,
            allowNull: false
        },
