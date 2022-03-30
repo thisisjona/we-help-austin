@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS we_help_db;
+
+CREATE DATABASE we_help_db;
