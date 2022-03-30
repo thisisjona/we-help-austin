@@ -19,6 +19,10 @@ Post.init(
         type: DataTypes.STRING,
         allowNull: false
        },
+       body: {
+        type: DataTypes.STRING,
+        allowNull:false
+       },
        deadline: {
            type: DataTypes.DATE,
            allowNull: false
