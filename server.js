@@ -2,7 +2,7 @@ const express = require('express');
 const routes = require('./controllers');
 const path = require('path');
 const session = require('express-session');
-const sequelize = require('./config/connections');
+const sequelize = require('./config/connection');
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -45,5 +45,5 @@ app.use(routes);
 app.use(session(sess));
 
 sequelize.sync({ force: false }).then(() => {
-app.listen(PORT, () => console.log('Now listening'));
+    app.listen(PORT, () => console.log('Now listening'));
 });
