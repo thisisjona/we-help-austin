@@ -1,4 +1,4 @@
-const { Model, DataTypes, INTEGER } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Post extends Model {};
@@ -6,13 +6,13 @@ class Post extends Model {};
 Post.init(
    {
        id: {
-           type: INTEGER,
+           type: DataTypes.INTEGER,
            allowNull: false,
            primaryKey: true,
            autoIncrement: true
        },
        title: {
-           type: DataTypes.INTEGER,
+           type: DataTypes.STRING,
            allowNull: false,
        },
        username:{
@@ -20,14 +20,18 @@ Post.init(
         allowNull: false
        },
        body: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull:false
        },
        deadline: {
-           type: DataTypes.DATE,
+           type: DataTypes.STRING,
            allowNull: false
        },
        tag: {
+           type: DataTypes.STRING,
+           allowNull: false
+       },
+       requirements: {
            type: DataTypes.STRING,
            allowNull: false
        }

@@ -37,31 +37,31 @@ router.get('/:id', (req, res) => {
     });
 });
 
-// router.get('/username', (req, res) => {
-//     User.findOne({
-//         attributes: {exclude: ['password'] },
-//         where: {
-//             username: req.body.username
-//         },
-//         include: [
-//             {
-//                 model: Post,
-//                 attributes: ['title', 'username', 'body', 'tag', 'created_at']
-//             }
-//         ]
-//     })
-//     .then(dbUserData => {
-//         if (!dbUserData) {
-//             res.status(404).json({ message: 'User not found'})
-//             return;
-//         }
-//         res.json(dbUserData);
-//     })
-//     .catch(err => {
-//         console.log(err)
-//         res.status(500).json(err)
-//     });
-// });
+router.post('/username', (req, res) => {
+    User.findOne({
+        attributes: { exclude: ['password'] },
+        where: {
+            username: req.body.username
+        },
+        include:[
+            {
+                model: Post,
+                attributes: ['title', 'username', 'body', 'tag', 'created_at']
+            }
+        ]
+    })
+    .then(dbUserData => {
+        if (!dbUserData) {
+            res.status(404).json({ message: 'User not found'})
+            return;
+        }
+        res.json(dbUserData);
+    })
+    .catch(err => {
+        console.log(err)
+        res.status(500).json(err)
+    });
+});
 
 router.post('/', (req, res) => {
     User.create({
