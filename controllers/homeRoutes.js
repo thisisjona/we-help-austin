@@ -1,6 +1,7 @@
 const router = require('express').Router();
+const withAuth = require('../utils/auth');
 
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
     res.render('homepage')
     .catch(err => {
         console.log(err)
@@ -8,7 +9,7 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('/login', (req, res) => {
+router.get('/login', withAuth, (req, res) => {
     res.render('login')
     .catch(err => {
         console.log(err)
