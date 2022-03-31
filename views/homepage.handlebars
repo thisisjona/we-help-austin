@@ -1,13 +1,21 @@
-<iframe
-  width="600"
-  height="450"
-  style="border:0"
-  loading="lazy"
-  allowfullscreen
-  referrerpolicy="no-referrer-when-downgrade"
-  src="https://www.google.com/maps/embed/v1/place?key=API_KEY
-    &q=Space+Needle,Seattle+WA">
-</iframe>
-<script async defer
-  src="https://maps.googleapis.com/maps/api/js?key="process.env.DB_NAME>
-</script>
+<ol>
+  {{#each posts as |post|}}
+    <li>
+      <article>
+        <div>
+          <a href='{{post.post_url}}' target='_blank'>{{post.title}}</a>
+          <span>({{post.post_url}})</span>
+        </div>
+        <div>
+          {{post.vote_count}}
+          point(s) by
+          {{post.user.username}}
+          on
+          {{post.created_at}}
+          |
+          <a href='/post/{{post.id}}'>{{post.comments.length}} comment(s)</a>
+        </div>
+      </article>
+    </li>
+  {{/each}}
+</ol>
