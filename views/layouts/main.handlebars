@@ -10,20 +10,26 @@
       crossorigin='anonymous'
       referrerpolicy='no-referrer'
     ></script>
-    <link rel='stylesheet' href='/public/stylesheets/reset.css' />
+    <link rel='stylesheet' href='/public/stylesheets/style.css'/>
   </head>
   <body>
+    <div>
     <header>
       <h1>
         <a href='/'>We Help Austin</a>
       </h1>
+      {{{ header }}}
       <nav>
         <a class='btn btn-primary' href='/login' role='button'>Login</a>
         <a class='btn btn-primary' href='/signup' role='button'>Signup</a>
       </nav>
-      <div>
-       
-      </div>
     </header>
+    <main>
+{{{ body }}}
+    </main>
+    <footer>
+{{{ footer }}}
+    </footer>
+     </div>
   </body>
 </html>

@@ -1,0 +1,29 @@
+body {
+    padding-top: 5px;
+    background-image: url("../images/mplifting.avif");
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+    color: azure;
+    }
+  
+  .bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("../images/mplifting.avif");
+    min-height: 75%;
+  }
+  
+  p {
+    display: inline;
+  }
+  
+  .card-body {
+    color: black;
+  }
+  
