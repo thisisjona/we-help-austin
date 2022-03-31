@@ -8,3 +8,4 @@ npm i express-session connect-session-sequelize
 npm install express-handlebars
 npm install socket.io
 npm install --save-dev jest
+npm install cors
