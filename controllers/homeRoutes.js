@@ -1,12 +1,12 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
 
-router.get('/', withAuth, (req, res) => {
+router.get('/', (req, res) => {
     res.render('homepage')
-    .catch(err => {
-        console.log(err)
-        res.status(500).json(err);
-    })
+    // .catch(err => {
+    //     console.log(err)
+    //     res.status(500).json(err);
+    // })
 })
 
 router.get('/login', withAuth, (req, res) => {
