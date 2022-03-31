@@ -9,11 +9,11 @@ router.get('/', (req, res) => {
 })
 
 router.get('/login', (req, res) => {
-    res.render('login')
-    .catch(err => {
-        console.log(err)
-        res.status(500).json(err);
-    })
+    res.render('login');
+    // .catch(err => {
+    //     console.log(err)
+    //     res.status(500).json(err);
+    // })
 });
 
 router.get('/signUp', (req, res) => {

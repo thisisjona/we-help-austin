@@ -2,7 +2,10 @@ const express = require("express");
 const app = express();
 const routes = require("./controllers");
 const path = require("path");
+const exphbs = require('express-handlebars');
 const session = require("express-session");
+const helpers = require('./utils/helpers');
+const hbs = exphbs.create({helpers});
 const sequelize = require("./config/connection");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
@@ -21,9 +24,9 @@ const sess = {
 const cors = require('cors');
 app.use(cors());
 //connects to client side
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
-});
+// app.get("/", (req, res) => {
+//   res.sendFile(__dirname + "/index.html");
+// });
 //starting https server
 var http = require("http").createServer(app);
 //added cors middleware to allow cross origin requests in the browser
@@ -71,6 +74,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(routes);
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 app.use(session(sess));
 
 sequelize.sync({ force: false }).then(() => {
