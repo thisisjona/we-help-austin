@@ -15,12 +15,24 @@ html {
 
 /* NAV STYLES */
 .navbar {
+  background: radial-gradient(
+    circle,
+    rgba(209, 198, 187, 1) 18%,
+    rgba(224, 168, 174, 1) 100%
+  );
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
 #nav-tree {
   width: 2.5rem;
   border-radius: 50%;
+  font-size: 5rem;
+}
+
+#navbar-title {
+  font-size: 1.5rem;
+  color: #3b3b3b;
+  padding-left: 1rem;
 }
 
 .btn {
@@ -33,10 +45,11 @@ html {
 }
 
 .btn-primary:hover {
-  background-color: #e7717d;
+  background-color: white;
+  color: black;
   cursor: pointer;
   border: none;
-  box-shadow: 2px 2px 4px #000000;
+  box-shadow: 1px 1px 5px #000000;
 }
 
 /* FOOTER STYLES */
@@ -54,7 +67,6 @@ body {
 }
 
 #footer-title {
-  color: #e7717d;
   font-size: 1.5rem;
 }
 
