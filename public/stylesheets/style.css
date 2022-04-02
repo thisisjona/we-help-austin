@@ -8,19 +8,19 @@ main {
 
 body,
 html {
-  height: 100%;
   font-family: 'Inconsolata', sans-serif;
-  color: azure;
+}
+
+.full-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* NAV STYLES */
 .navbar {
-  background: radial-gradient(
-    circle,
-    rgba(209, 198, 187, 1) 18%,
-    rgba(224, 168, 174, 1) 100%
-  );
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  background-color: #f7f9fb;
 }
 
 #nav-tree {
@@ -45,11 +45,16 @@ html {
 }
 
 .btn-primary:hover {
-  background-color: white;
-  color: black;
+  background-color: #e7717d;
+  color: white;
   cursor: pointer;
   border: none;
   box-shadow: 1px 1px 5px #000000;
+}
+/* END OF NAV */
+
+main {
+  flex: 1;
 }
 
 /* FOOTER STYLES */
@@ -61,7 +66,8 @@ body {
 }
 
 .card {
-  padding: 2% 7%;
+  margin-bottom: 1rem;
+  padding: 3rem 4rem;
   color: #f7f9fb;
   background-color: #687864;
 }
