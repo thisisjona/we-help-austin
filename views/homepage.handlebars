@@ -3,17 +3,19 @@
     <li>
       <article>
         <div>
-          <a href='{{post.post_url}}' target='_blank'>{{post.title}}</a>
-          <span>({{post.post_url}})</span>
+          <a href='{{post.tag}}' target='_blank'>{{post.title}}</a>
         </div>
         <div>
-          {{post.vote_count}}
-          point(s) by
-          {{post.user.username}}
-          on
+          {{post.description}}
+          Posted By:
+          {{post.username}}
+          Created on:
           {{post.created_at}}
-          |
-          <a href='/post/{{post.id}}'>{{post.comments.length}} comment(s)</a>
+          Requirements:
+          {{post.requirements}}
+          When:
+          {{post.deadline}}
+          <a href='/post/{{post.id}}'></a>
         </div>
       </article>
     </li>

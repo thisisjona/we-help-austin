@@ -1,45 +1,74 @@
-<article>
-  <div>
-    <a href='{{post.post_url}}' target='_blank'>{{post.title}}</a>
-    <span>({{post.post_url}})</span>
-  </div>
-  <div>
-    {{post.vote_count}}
-    point(s) by
-    {{post.user.username}}
-    on
-    {{post.created_at}}
-    |
-    <a href='/post/{{post.id}}'>{{post.comments.length}} comment(s)</a>
-  </div>
-</article>
-{{#if loggedIn}}
-  <form>
-    <div>
-      <textarea name='comment-body'></textarea>
-    </div>
-
-    <div>
-      <button type='submit'>add comment</button>
-      <button type='button' class='upvote-btn'>upvote</button>
-    </div>
-  </form>
-{{/if}}
-
-<div>
-  {{#each post.comments}}
-    <section>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="../public/stylesheets/style.css" />
+  </head>
+  <body>
+{{{ Header }}}
+    <article>
       <div>
-        {{user.username}}
-        on
-        {{created_at}}
+        <a href="{{post.tag}}" target="_blank">{{post.title}}</a>
+        {{#if loggedIn}}
+          <div>
+             <input id="btn" type="button" value="click" onclick="postAcceptance(); sendEmail();"/>I Want to Help</button>
+          </div>
+        {{/if}}
+        <span>({{post.id}})</span>
+        <script>
+          function postAcceptance(event) {
+      location.href = 'post-update.handlebars';
+          };
+
+          function sendEmail(event) {
+             {{!-- insert function that sends an email notification here  --}}
+          };
+        </script>
       </div>
       <div>
-        {{comment_text}}
+        {{{post.body}}}
       </div>
-    </section>
-  {{/each}}
-</div>
-{{#if loggedIn}}
-  {{! JAVASCRIPT FILE LINKS - IF LOGGED IN, THEN YOU CAN VIEW POSTS }}
-{{/if}}
+      <div>
+        Posted by:
+        {{post.user.username}}
+        When:
+        {{post.deadline}}
+        Date Posted:
+        {{post.created_at}}
+        Requirements:
+        {{post.requirements}}
+        Tags:
+        {{post.tags}}
+        |
+        <a href="/post/{{post.id}}"></a>
+      </div>
+    </article>
+
+    {{#if loggedIn}}
+      {{! JAVASCRIPT FILE LINKS - IF LOGGED IN, THEN YOU CAN VIEW POSTS }}
+    {{/if}}
+    <div>
+      {{! Google maps.  API is restricted. }}
+      <iframe
+        width="600"
+        height="450"
+        style="border:0"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBJBhD25Oh977iUWwe6QM84YLjGF4g8joo&q=Austin+TX"
+      >
+      </iframe>
+
+      <script
+        async
+        defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJBhD25Oh977iUWwe6QM84YLjGF4g8joo"
+      >
+      </script>
+    </div>
+{{!-- Need to add chat box here --}}
+  </body>
+</html>

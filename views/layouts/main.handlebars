@@ -4,30 +4,41 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>We Help Austin</title>
+    {{! <link
+      rel='stylesheet'
+      href='https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css'
+      integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u'
+      crossorigin='anonymous'
+    /> }}
+    <link
+      rel='stylesheet'
+      href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css'
+      integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3'
+      crossorigin='anonymous'
+    />
+    <link
+      rel='stylesheet'
+      href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
+    />
+    <link rel='stylesheet' href='/stylesheets/reset.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <header>
-      <h1>
-        <a href='/'>We Help Austin</a>
-      </h1>
-      <nav>
-        <a href='/login'>Login</a>
-      </nav>
-      <div>
-        <iframe
-  width="600"
-  height="450"
-  style="border:0"
-  loading="lazy"
-  allowfullscreen
-  referrerpolicy="no-referrer-when-downgrade"
-  src='https://www.google.com/maps/embed/v1/place?key=AIzaSyBPJNu-E_xAawRiNnjHWzo1AhiWGD_VkfA
-    &q=Space+Needle,Seattle+WA'>
-</iframe>
-<script async defer
-  src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBPJNu-E_xAawRiNnjHWzo1AhiWGD_VkfA'>
-</script>
-      </div>
-    </header>
+    <div>
+      <header>
+        {{> header}}
+      </header>
+      <main>
+        {{!-- <h1 class='main-text'>This is the body!!!</h1> --}}
+      </main>
+      <footer>
+        {{> footer}}
+      </footer>
+    </div>
+    <script
+      src='https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js'
+      integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa'
+      crossorigin='anonymous'
+    ></script>
   </body>
 </html>

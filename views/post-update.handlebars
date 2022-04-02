@@ -1,0 +1,84 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="../public/stylesheets/style.css" />
+  </head>
+  <body>
+    {{{header}}}
+    <article>
+      <div>
+        <a href="{{post.tag}}" target="_blank">{{post.title}}</a>
+        {{#if loggedIn}}
+          <div>
+            <button onclick="issueClosed()">Task Completed</button>
+          </div>
+          <script>
+            function issueClosed() { 
+              alert("Reminder: Please rate your helper below before closing."); 
+              }
+          </script>
+        {{/if}}
+        <span>({{post.id}})</span>
+      </div>
+      <div>
+        {{{post.body}}}
+      </div>
+      <div>
+        Posted by:
+        {{post.user.username}}
+        When:
+        {{post.deadline}}
+        Date Posted:
+        {{post.created_at}}
+        Requirements:
+        {{post.requirements}}
+        Tags:
+        {{post.tags}}
+        |
+        <a href="/post/{{post.id}}"></a>
+      </div>
+    </article>
+
+    {{#if loggedIn}}
+      {{! JAVASCRIPT FILE LINKS - IF LOGGED IN, THEN YOU CAN VIEW POSTS }}
+    {{/if}}
+    <div>
+      {{! Google maps.  API is restricted. }}
+      <iframe
+        width="600"
+        height="450"
+        style="border:0"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBJBhD25Oh977iUWwe6QM84YLjGF4g8joo&q=Austin+TX"
+      >
+      </iframe>
+
+      <script
+        async
+        defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJBhD25Oh977iUWwe6QM84YLjGF4g8joo"
+      >
+      </script>
+    </div>
+    {{! Adding ratings for user after click "task completed" }}
+    <div class="star-container">
+      <span id="rateMe3" class="rating-faces"></span>
+    </div>
+    <div>
+      {{ footer }}
+    </div>
+    <script>
+      // Rating Initialization $(document).ready(function() {
+      $('#rateMe3').mdbRate(); });
+    </script>
+
+    <!-- rating.js file -->
+    <script src="../server.js"></script>
+
+  </body>
+</html>

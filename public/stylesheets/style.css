@@ -1,0 +1,122 @@
+main {
+  padding-top: 5px;
+  background-image: url('../images/mplifting.avif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: 'Inconsolata', sans-serif;
+  color: azure;
+}
+
+/* NAV STYLES */
+.navbar {
+  background: radial-gradient(
+    circle,
+    rgba(209, 198, 187, 1) 18%,
+    rgba(224, 168, 174, 1) 100%
+  );
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+#nav-tree {
+  width: 2.5rem;
+  border-radius: 50%;
+  font-size: 5rem;
+}
+
+#navbar-title {
+  font-size: 1.5rem;
+  color: #3b3b3b;
+  padding-left: 1rem;
+}
+
+.btn {
+  margin: 0 0.2rem 0 0.2rem;
+}
+
+.btn-primary {
+  background-color: #687864;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border: none;
+  box-shadow: 1px 1px 5px #000000;
+}
+
+/* FOOTER STYLES */
+body {
+  background-color: #f3f6fd;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(189, 196, 203);
+}
+
+.card {
+  padding: 2% 7%;
+  color: #f7f9fb;
+  background-color: #687864;
+}
+
+#footer-title {
+  font-size: 1.5rem;
+}
+
+.heading {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.card-text {
+  padding-top: 0.7rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul > li {
+  padding: 4px;
+}
+
+ul > li:hover {
+  color: #e7717d;
+  cursor: pointer;
+}
+
+hr {
+  border-width: 3px;
+}
+
+.social > i {
+  padding: 1%;
+  font-size: 2rem;
+}
+
+.social > i:hover {
+  color: #e7717d;
+  cursor: pointer;
+}
+
+.divider {
+  border-top: 2px solid rgba(189, 196, 203, 0.5);
+}
+
+.copywright {
+  font-size: 0.7rem;
+}
+
+.policy > div {
+  padding: 4px;
+  font-size: 0.8rem;
+}
