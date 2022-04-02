@@ -2,7 +2,8 @@ const router = require('express').Router();
 const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
-    res.render('homepage')
+    console.log ('I see this');
+    res.render('homepage', {})
     // .catch(err => {
     //     console.log(err)
     //     res.status(500).json(err);
@@ -11,26 +12,36 @@ router.get('/', (req, res) => {
 
 router.get('/login', withAuth, (req, res) => {
     res.render('login')
-    .catch(err => {
-        console.log(err)
-        res.status(500).json(err);
-    })
+    // .catch(err => {
+    //     console.log(err)
+    //     res.status(500).json(err);
+    // })
 });
 
 router.get('/signUp', (req, res) => {
-    res.render('signUp')
-    .catch(err => {
-        console.log(err)
-        res.status(500).json(err);
-    })
+    console.log ('I see this');
+    res.render('signup')
+    
+    // .catch(err => {
+    //     console.log(err)
+    //     res.status(500).json(err);
+    // })
 });
 
 router.get('/about', (req, res) => {
     res.render('about')
-    .catch(err => {
-        console.log(err)
-        res.status(500).json(err);
-    })
+    // .catch(err => {
+    //     console.log(err)
+    //     res.status(500).json(err);
+    // })
+});
+
+router.get('/chat', (req, res) => {
+    res.render('chat')
+    // .catch(err => {
+    //     console.log(err)
+    //     res.status(500).json(err);
+    // })
 });
 
 module.exports = router;
