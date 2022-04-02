@@ -27,8 +27,16 @@ html {
   margin: 0 0.2rem 0 0.2rem;
 }
 
-.main-text {
-  font-size: 9rem;
+.btn-primary {
+  background-color: #687864;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #e7717d;
+  cursor: pointer;
+  border: none;
+  box-shadow: 2px 2px 4px #000000;
 }
 
 /* FOOTER STYLES */
