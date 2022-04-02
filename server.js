@@ -15,8 +15,8 @@ const sess = {
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
-    db: sequelize,
-  }),
+      db: sequelize
+  })
 };
 
 //Starting connecting for server side chat
@@ -72,10 +72,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 // app.use(express.static('public')); ?????
-app.use(routes);
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.use(session(sess));
+
+app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
