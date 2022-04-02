@@ -13,6 +13,7 @@ html {
   color: azure;
 }
 
+/* NAV STYLES */
 .navbar {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
@@ -30,27 +31,10 @@ html {
   font-size: 9rem;
 }
 
-/* .bgimg {
-  background-position: center;
-  background-size: cover;
-  background-image: url('../images/mplifting.avif');
-  min-height: 75%;
-} */
-
-/* p {
-  display: inline;
-} */
-
-/* .card-body {
-  color: black;
-} */
-
-/* *************************
-BEGINNING FOOTER STYLES
-**************************** */
+/* FOOTER STYLES */
 body {
   background-color: #f3f6fd;
-  font-size: 11.5px;
+  font-size: 1rem;
   font-weight: bold;
   color: rgb(189, 196, 203);
 }
@@ -63,6 +47,16 @@ body {
 
 #footer-title {
   color: #e7717d;
+  font-size: 1.5rem;
+}
+
+.heading {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.card-text {
+  padding-top: 0.7rem;
 }
 
 ul {
@@ -76,7 +70,7 @@ ul > li {
 }
 
 ul > li:hover {
-  color: #957bda;
+  color: #e7717d;
   cursor: pointer;
 }
 
@@ -86,22 +80,23 @@ hr {
 
 .social > i {
   padding: 1%;
-  font-size: 15px;
+  font-size: 2rem;
 }
 
 .social > i:hover {
-  color: #957bda;
+  color: #e7717d;
   cursor: pointer;
-}
-
-.policy > div {
-  padding: 4px;
-}
-
-.heading {
-  color: white;
 }
 
 .divider {
   border-top: 2px solid rgba(189, 196, 203, 0.5);
+}
+
+.copywright {
+  font-size: 0.7rem;
+}
+
+.policy > div {
+  padding: 4px;
+  font-size: 0.8rem;
 }
