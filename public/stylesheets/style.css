@@ -12,7 +12,7 @@ main {
 
 body,
 html {
-  font-family: "Inconsolata", sans-serif;
+  font-family: 'Inconsolata', sans-serif;
 }
 
 a {
@@ -161,7 +161,7 @@ hr {
 /* About us page */
 .about-content {
   background-color: white;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
   align-items: center;
   display: flex;
   color: #000000;
@@ -175,27 +175,31 @@ hr {
   margin: 0 0 20px;
 }
 
-.tree-container .tree-off  {
+.tree-container .tree-off {
   background-image: url(../images/treelogo.jpg);
   object-fit: cover;
   height: 200px;
   width: 200px;
   opacity: 0.25;
-  
 }
 
 .tree-container .tree-off {
   background-image: url(../images/treelogo.jpg);
-   height: 100px;
+  height: 100px;
   width: 100px;
   opacity: 0.5;
-  
 }
 
 .tree-on {
   background-image: url(../images/treelogo.jpg);
   height: 300px;
   width: 300px;
+}
+
+#about-us-title {
+  font-size: 2rem;
+  color: #222;
+  text-shadow: 0px 2px 3px #555;
 }
 
 .contact-us-accent {
@@ -236,7 +240,7 @@ hr {
 
 /* End about us page */
 /* index page css carousel */
-.carousel-item{
+.carousel-item {
   min-height: 280px;
 }
 /* end carousel */
