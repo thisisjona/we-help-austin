@@ -1,10 +1,10 @@
-/* main {
+/* .index {
   padding-top: 5px;
   background-image: url('../images/mplifting.avif');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-} */
+}  */
 
 main {
   background-color: #f7f9fb;
@@ -12,7 +12,7 @@ main {
 
 body,
 html {
-  font-family: 'Inconsolata', sans-serif;
+  font-family: "Inconsolata", sans-serif;
 }
 
 a {
@@ -157,3 +157,86 @@ hr {
 .logsign-logo {
   background-color: #31708e;
 }
+
+/* About us page */
+.about-content {
+  background-color: white;
+  transition: all .25s ease;
+  align-items: center;
+  display: flex;
+  color: #000000;
+  flex-direction: column;
+}
+
+.tree-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 20px;
+}
+
+.tree-container .tree-off  {
+  background-image: url(../images/treelogo.jpg);
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
+  opacity: 0.25;
+  
+}
+
+.tree-container .tree-off {
+  background-image: url(../images/treelogo.jpg);
+   height: 100px;
+  width: 100px;
+  opacity: 0.5;
+  
+}
+
+.tree-on {
+  background-image: url(../images/treelogo.jpg);
+  height: 300px;
+  width: 300px;
+}
+
+.contact-us-accent {
+  background-color: #31708e;
+  color: rgba(0, 0, 0, 0.5);
+  display: grid;
+  font-size: 18px;
+  height: 40px;
+  place-items: center;
+  width: 100%;
+}
+
+.subtitle {
+  font-size: 24px;
+  height: 50px;
+  transition: all 0.25s ease;
+  background-color: #687864;
+  color: #f7f9fb;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+}
+
+.subtitle-text {
+  font-size: 14px;
+  margin: 0 auto 0 0;
+}
+
+.contact-copy {
+  background-color: #687864;
+  align-items: center;
+  border: 3px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  padding: 5px 10px;
+}
+
+/* End about us page */
+/* index page css carousel */
+.carousel-item{
+  min-height: 280px;
+}
+/* end carousel */
