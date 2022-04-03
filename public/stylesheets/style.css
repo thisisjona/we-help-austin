@@ -159,6 +159,15 @@ hr {
 }
 
 /* About us page */
+.about-content {
+  background-color: white;
+  transition: all .25s ease;
+  align-items: center;
+  display: flex;
+  color: #000000;
+  flex-direction: column;
+}
+
 .tree-container {
   align-items: center;
   display: flex;
@@ -166,24 +175,27 @@ hr {
   margin: 0 0 20px;
 }
 
-.tree-container .tree1 {
+.tree-container .tree-off  {
+  background-image: url(../images/treelogo.jpg);
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
   opacity: 0.25;
-  background: transparent;
-  border: 0;
-  margin: 0;
-}
-
-.tree-container .tree12 {
-  opacity: 0.5;
-  background: transparent;
-  border: 0;
-  margin: 0;
+  
 }
 
 .tree-container .tree-off {
   background-image: url(../images/treelogo.jpg);
-  height: 100px;
+   height: 100px;
   width: 100px;
+  opacity: 0.5;
+  
+}
+
+.tree-on {
+  background-image: url(../images/treelogo.jpg);
+  height: 300px;
+  width: 300px;
 }
 
 .contact-us-accent {
@@ -200,10 +212,11 @@ hr {
   font-size: 24px;
   height: 50px;
   transition: all 0.25s ease;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #31708e;
+  background-color: #687864;
+  color: #f7f9fb;
   justify-content: center;
   display: flex;
+  width: 100%;
 }
 
 .subtitle-text {
@@ -212,14 +225,13 @@ hr {
 }
 
 .contact-copy {
+  background-color: #687864;
   align-items: center;
   border: 3px solid rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   display: flex;
-  justify-content: space-evenly;
   padding: 5px 10px;
-  width: 90%;
 }
 
 /* End about us page */
