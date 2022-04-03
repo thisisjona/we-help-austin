@@ -244,3 +244,23 @@ hr {
   min-height: 280px;
 }
 /* end carousel */
+/* dashboard css start */
+.wrapper {
+  margin: 0 auto;
+  width: 100%
+}
+
+#handlebars-sandbox {
+  padding: 8px;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)) ;
+  grid-auto-rows: minmax(264px, auto);
+  grid-gap: 20px;
+  margin-top: 20px
+}
+
+.panel {
+  margin-left: 5px;
+  margin-right: 5px;
+}
