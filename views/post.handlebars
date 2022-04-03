@@ -3,32 +3,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{title}}</title>
-    <link rel="stylesheet" href="../public/stylesheets/style.css" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
   </head>
   <body>
-{{{ Header }}}
     <article>
       <div>
         <a href="{{post.tag}}" target="_blank">{{post.title}}</a>
         {{#if loggedIn}}
           <div>
-             <input id="btn" type="button" value="click" onclick="postAcceptance(); sendEmail();"/>I Want to Help</button>
+             <button class="btn-primary" onclick="post-update"/>I Want to Help</button>
           </div>
         {{/if}}
         <span>({{post.id}})</span>
-        <script>
-          function postAcceptance(event) {
-      location.href = 'post-update.handlebars';
-          };
-
-          function sendEmail(event) {
-             {{!-- insert function that sends an email notification here  --}}
-          };
-        </script>
+        
       </div>
       <div>
-        {{{post.body}}}
+        {{ post.body }}
       </div>
       <div>
         Posted by:
@@ -42,9 +33,10 @@
         Tags:
         {{post.tags}}
         |
-        <a href="/post/{{post.id}}"></a>
+        {{post.id}}">
       </div>
     </article>
+  
 
     {{#if loggedIn}}
       {{! JAVASCRIPT FILE LINKS - IF LOGGED IN, THEN YOU CAN VIEW POSTS }}
@@ -69,6 +61,5 @@
       >
       </script>
     </div>
-{{!-- Need to add chat box here --}}
   </body>
 </html>

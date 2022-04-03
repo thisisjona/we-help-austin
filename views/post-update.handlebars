@@ -3,22 +3,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{title}}</title>
-    <link rel="stylesheet" href="../public/stylesheets/style.css" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
   </head>
   <body>
-    {{{header}}}
     <article>
       <div>
         <a href="{{post.tag}}" target="_blank">{{post.title}}</a>
         {{#if loggedIn}}
           <div>
-            <button onclick="issueClosed()">Task Completed</button>
+            <button class="btn-primary" onclick="issueClosed()">Task Completed</button>
           </div>
           <script>
             function issueClosed() { 
-              alert("Reminder: Please rate your helper below before closing."); 
-              }
+              var myText = "Remember to rate your helper.";
+              alert (myText);
+              };
           </script>
         {{/if}}
         <span>({{post.id}})</span>
@@ -38,7 +38,7 @@
         Tags:
         {{post.tags}}
         |
-        <a href="/post/{{post.id}}"></a>
+       {{post.id}}">
       </div>
     </article>
 
@@ -69,16 +69,11 @@
     <div class="star-container">
       <span id="rateMe3" class="rating-faces"></span>
     </div>
-    <div>
-      {{ footer }}
-    </div>
     <script>
-      // Rating Initialization $(document).ready(function() {
       $('#rateMe3').mdbRate(); });
     </script>
-
-    <!-- rating.js file -->
     <script src="../server.js"></script>
-
+<div>
+    </div>
   </body>
 </html>
