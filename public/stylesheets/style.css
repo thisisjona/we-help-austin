@@ -137,3 +137,10 @@ hr {
 }
 
 /* LOGIN PAGE STYLES */
+.login-text {
+  color: #687864;
+}
+
+.login-logo {
+  background-color: #31708e;
+}
