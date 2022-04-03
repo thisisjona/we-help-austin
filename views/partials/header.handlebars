@@ -13,8 +13,11 @@
     <div class='collapse navbar-collapse' id='navbarSupportedContent'>
     </div>
     <div class='d-grid gap-2 d-md-flex justify-content-md-end'>
-      <button class='btn btn-primary log-sign' type='button'>Login</button>
-      <button class='btn btn-primary log-sign' type='button'>Signup</button>
+      {{#if loggedIn}}
+      <button class='btn btn-primary log-sign' type='button'>Logout</button>
+      {{/if}}
+      <button class='btn btn-primary log-sign' type='button'><a href='/login'></a>Login</button>
+      <button class='btn btn-primary log-sign' type='button'><a href='/signup'></a>Signup</button>
     </div>
   </div>
 </nav>

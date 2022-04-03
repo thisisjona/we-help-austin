@@ -15,6 +15,7 @@ async function loginFormHandler(event) {
         });
 
         if (response.ok) {
+            console.log('working')
             document.location.replace('/');
         } else {
             alert(response.statusText);
@@ -22,4 +23,4 @@ async function loginFormHandler(event) {
     }
 }
 
-document.querySelector('.login-form'). addEventListener('submit', loginFormHandler);
+document.querySelector('#login-btn').addEventListener('submit', loginFormHandler);

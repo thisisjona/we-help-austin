@@ -3,19 +3,19 @@ async function deletePost(event) {
 
     const id = window.location.toString().split('/')[window.location.toString().split('/').length - 1];
     
-    const response = await fetch('/api/posts/:id', {
+    const response = await fetch('/helpPosts/', {
         method: 'delete',
-        body: JSON.stringify({post_id}),
+        body: JSON.stringify({id}),
         headers: {
             'Content-Type': 'application/json'
         }
     });
     
     if (response.ok) {
-        document.location.replace('/dashboard');
+        document.location.replace('/');
     } else {
         alert(response.statusText);
     }
 }
-
-document.querySelector('.delete-post-btn').addEventListener('click', deleteFormHandler);
+// link to delete button
+document.querySelector('.delete-post-btn').addEventListener('click', deletePost);
