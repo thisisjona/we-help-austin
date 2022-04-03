@@ -15,6 +15,17 @@ html {
   font-family: 'Inconsolata', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: #f7f9fb;
+}
+
+a:hover {
+  color: #8fc1e3;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .full-wrapper {
   height: 100vh;
   display: flex;
@@ -102,11 +113,13 @@ ul {
 
 ul > li {
   padding: 4px;
+  text-decoration: none;
 }
 
 ul > li:hover {
   color: #8fc1e3;
   cursor: pointer;
+  text-decoration: none;
 }
 
 hr {
