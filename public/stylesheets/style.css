@@ -1,10 +1,10 @@
-/* main {
+/* .index {
   padding-top: 5px;
   background-image: url('../images/mplifting.avif');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-} */
+}  */
 
 main {
   background-color: #f7f9fb;
@@ -235,3 +235,8 @@ hr {
 }
 
 /* End about us page */
+/* index page css carousel */
+.carousel-item{
+  min-height: 280px;
+}
+/* end carousel */
