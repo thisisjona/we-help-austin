@@ -1,9 +1,35 @@
 
-<h2>About Page - Esterling Accime</h2>
+<h2>Our Mission</h2>
 
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, eligendi eius! Qui aut quia eum, deleniti excepturi soluta provident ab molestias. Exercitationem voluptates assumenda dolorum necessitatibus adipisci recusandae dicta culpa.</p>
+<section class="tree-container">
+    <div class="tree-off tree1"></div>
+    <div class="tree-off tree2"></div>
+    <div class="tree-on"></div>
+</section>
 
+<p>A fresh take on community building</p>
+<a href="./contactus" class="contact-us-accent">Contact Us</a>
 
-<p>Description:  </p>
+<p>
+    We are a team of four full stack developers that come from totally different backgrounds that are a part of the best community in the world!  Austin, Texas Y'all!</p>
+</p>
 
-
+<h3 class="subtitle">Questions?</h3>
+<br>
+<p class="subtitle-text">Click the link to copy our email address quickly</p>
+<br>
+<div class="contact-copy">
+    <input type="text" value="wehelpaustin@gmail.com" id="myInput" >
+    <button class="btn btn-primary" onclick="emailUs()">Copy Email</button>
+<script>
+    function emailUs() {
+        var copyText = document.getElementById("myInput");
+        copyText.select();
+        copyText.setSelectionRange(0, 999999);
+        navigator.clipboard.writeText(copyText.value);
+        alert("Copied Email:" + copyText.value);
+    }
+</script>
+</div>
+</body>
+</html>
