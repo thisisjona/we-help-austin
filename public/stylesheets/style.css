@@ -1,9 +1,13 @@
-main {
+/* main {
   padding-top: 5px;
   background-image: url('../images/mplifting.avif');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+} */
+
+main {
+  background-color: #f7f9fb;
 }
 
 body,
@@ -20,7 +24,7 @@ html {
 /* NAV STYLES */
 .navbar {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  background-color: #f7f9fb;
+  background-color: #687864;
 }
 
 #nav-tree {
@@ -31,7 +35,7 @@ html {
 
 #navbar-title {
   font-size: 1.5rem;
-  color: #3b3b3b;
+  color: #f7f9fb;
   padding-left: 1rem;
 }
 
@@ -40,13 +44,13 @@ html {
 }
 
 .btn-primary {
-  background-color: #687864;
+  background-color: #31708e;
   border: none;
 }
 
 .btn-primary:hover {
-  background-color: #e7717d;
-  color: white;
+  background-color: #5085a5;
+  color: #f7f9fb;
   cursor: pointer;
   border: none;
   box-shadow: 1px 1px 5px #000000;
@@ -73,22 +77,27 @@ body {
 }
 
 #footer-title {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .heading {
-  color: white;
-  font-size: 1.3rem;
+  color: #f7f9fb;
+  font-size: 1.1rem;
 }
 
 .card-text {
   padding-top: 0.7rem;
 }
 
+.footer-wrapper {
+  justify-content: space-around;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  font-size: 0.8rem;
 }
 
 ul > li {
@@ -96,7 +105,7 @@ ul > li {
 }
 
 ul > li:hover {
-  color: #e7717d;
+  color: #8fc1e3;
   cursor: pointer;
 }
 
@@ -106,11 +115,11 @@ hr {
 
 .social > i {
   padding: 1%;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .social > i:hover {
-  color: #e7717d;
+  color: #8fc1e3;
   cursor: pointer;
 }
 
@@ -125,4 +134,13 @@ hr {
 .policy > div {
   padding: 4px;
   font-size: 0.8rem;
+}
+
+/* LOGIN PAGE STYLES */
+.login-text {
+  color: #687864;
+}
+
+.login-logo {
+  background-color: #31708e;
 }
