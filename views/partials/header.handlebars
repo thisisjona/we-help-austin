@@ -13,12 +13,18 @@
     <div class='collapse navbar-collapse' id='navbarSupportedContent'>
     </div>
     <div class='d-grid gap-2 d-md-flex justify-content-md-end'>
+      {{#if loggedIn}}
+      <form action='/'>
+         <button id='logout-btn' class='btn btn-primary log-sign' type='submit'>Loggout</button>
+      </form>
+      {{else}}
       <form action='/login' />
          <button class='btn btn-primary log-sign' type='submit'>Log In</button>
       </form>
       <form action='/signup' />
          <button class='btn btn-primary log-sign' type='submit'>Sign Up</button>
       </form>
+      {{/if}}
     </div>
   </div>
 </nav>

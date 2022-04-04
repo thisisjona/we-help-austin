@@ -13,6 +13,26 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/:id', (req, res) => {
+    Post.findOne({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(dbPostData => {
+        if (!dbPostData) {
+            res.status(404).json({ message: 'No post with that id found'})
+            return;
+        }
+        res.json(dbPostData);
+    })
+    .catch(err => {
+        console.log(err)
+        res.status(500).json(err)
+    })
+});
+
+
 router.get('/:tag', (req, res) => {
     Post.findAll({
         where: {
@@ -35,7 +55,7 @@ router.get('/:tag', (req, res) => {
 router.post('/', withAuth, (req, res) => {
     Post.create({
         title: req.body.title,
-        username: req.body.username,
+        username: req.session.username,
         body: req.body.body,
         deadline: req.body.deadline,
         tag: req.body.tag,
@@ -48,7 +68,7 @@ router.post('/', withAuth, (req, res) => {
     })
 });
 
-router.put('/', withAuth, (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     Post.update(
         {
             title: req.body.title,
@@ -59,7 +79,7 @@ router.put('/', withAuth, (req, res) => {
         },
         {
             where: {
-                id: req.body.id
+                id: req.params.id
             }
         }
     )

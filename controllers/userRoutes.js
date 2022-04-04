@@ -63,7 +63,7 @@ router.post('/username', (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
+router.post('/signup', (req, res) => {
     User.create({
         username: req.body.username,
         email: req.body.email,
@@ -108,8 +108,8 @@ router.post('/login', (req, res) => {
             req.session.username = dbUserData.username;
             req.session.loggedIn = true;
 
-            res.json({ user: dbUserData, message: 'You are now logged in!'});
-        })
+            res.json({ user: dbUserData, message: 'You are now logged in!' });
+        });
     })
 })
 
