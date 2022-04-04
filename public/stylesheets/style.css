@@ -175,21 +175,6 @@ hr {
   margin: 0 0 20px;
 }
 
-.tree-container .tree-off {
-  background-image: url(../images/treelogo.jpg);
-  object-fit: cover;
-  height: 200px;
-  width: 200px;
-  opacity: 0.25;
-}
-
-.tree-container .tree-off {
-  background-image: url(../images/treelogo.jpg);
-  height: 100px;
-  width: 100px;
-  opacity: 0.5;
-}
-
 .tree-on {
   background-image: url(../images/treelogo.jpg);
   height: 300px;
