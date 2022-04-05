@@ -1,4 +1,70 @@
+<main class="main bg-light">
+    <hr class="bg-white">
+<body data-new-gr-c-s-check-loaded="14.1055.0">
+<section class="section section-lg bg-soft">
+    <div class="container">
+        <div class="row pt-5 pt-md-0">
+            <div class="col-12 col-md-4 d-none d-lg-block">
+                <div class="card border-light p-2">
+                    <div class="card-body p-2">
+                        <div class="profile-thumbnail mx-auto">
+                            <img src="/images/sprout.png" class="card-img-top rounded-circle border-white" alt="sprout">
+                        </div>
+                   <h2 class="h5 font-weight-normal text-center mt-3 mb-0">{{user.username}}</h2>
+                   <div class="list-group dashboard-menu list-group-sm mt-4">
+                       <a href="/" class="d-flex list-group-item list-group-item-action">Home
+                         <span class="icon icon-xs ml-auto">
+                             <span class="fas bi-caret-right"></span>
+                         </span>
+                        </a> 
+                       <a href="/contactus" class="d-flex list-group-item list-group-item-action">Contact Us
+                       <span class="icon icon-xs ml-auto">
+                             <span class="fas bi-caret-right"></span>
+                         </span>
+                        </a>
+                       <a href="/dashboard" class="d-flex list-group-item list-group-item-action">Dashboard
+                       <span class="icon icon-xs ml-auto">
+                             <span class="fas bi-caret-right"></span>
+                         </span>
+                        </a>
+                       <a href="/about" class="d-flex list-group-item list-group-item-action">About
+                       <span class="icon icon-xs ml-auto">
+                             <span class="fas bi-caret-right"></span>
+                         </span>
+                        </a>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-8">
+          <div class="row justify-content-center">
+             <div class="col-12 col-sm-10 col-md-6 col-lg-12">
+                 <a href="/dashboard" class="btn btn-primary log-sign" type="submit">Make New Post</a>
+                 <ol>
+  {{#each post as |user|}}
+    <li>
+      <article>
+        <div>
+          <a href='{{post.tag}}' target='_blank'>{{post.title}}</a>
+        </div>
+        <div>
+          {{post.description}}
+          Posted By:
+          {{post.username}}
+          Created on:
+          {{post.created_at}}
+          Requirements:
+          {{post.requirements}}
+          When:
+          {{post.deadline}}
+          <a href='/helppost/{{post.id}}'></a>
+        </div>
+      </article>
+    </li>
+  {{/each}}
+</ol>
 
+<<<<<<< HEAD
 <h1>Welcome</h1>
 <h2 id="username">
 {{ user.username }}
@@ -13,3 +79,13 @@
 </div>
 
 <script src="/javascript/getUserPosts.js"></script>
+=======
+                 </div>
+             </div> 
+          </div>  
+        </div>
+    </div>
+</section>
+</body> 
+</main>
+>>>>>>> main

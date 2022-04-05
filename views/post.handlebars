@@ -1,32 +1,15 @@
 <body>
-    <article>
-      <div>
-        <h1>{{post.title}}</h1>
-        {{#if loggedIn}}
-          <div>
-             <button class="btn-primary" onclick="post-update"/>I Want to Help</button>
-          </div>
-        {{/if}}
-        
-      </div>
-      <div>
-        {{ post.body }}
-      </div>
-      <div>
-        Posted by:
-        <p id="postUser">{{post.username}}</p>
-        When:
-        {{post.deadline}}
-        Date Posted:
-        {{post.createdAt}}
-        Requirements:
-        {{post.requirements}}
-        Tags:
-        {{post.tag}}
-      </div>
-    </article>
+  <hr class="bg-light">
+    <article class="container text-dark ">
+      <div class="card border-light mb-3">
+        <div class="row no-gutters align-items-center">
+          <div class="col-12 col-lg-6 col-xl-8">
+            <div class="card-img p-2 rounded-xl">
+    {{#if loggedIn }}
+    <script src="../javascript/logout.js"></script>
+    {{/if}}
     <div>
-      {{! Google maps.  API is restricted. }}
+      {{! Google maps.  API is restricted at the highest setting so it can't be used by others. }}
       <iframe
         width="600"
         height="450"
@@ -37,8 +20,34 @@
         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBJBhD25Oh977iUWwe6QM84YLjGF4g8joo&q=Austin+TX"
       >
       </iframe>
-      <button id='update-btn' class='btn btn-primary log-sign' type='submit'>Update Post</button>
+          </div>
+        </div>
+      </div>
 
+  <div class="card col-12 col-lg-6 col-xl-4 border-light" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Title: {{post.title}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle{{post.id}}</h6>
+    <p class="card-text">{{post.body}}</p>
+    <h6 class="card-text">Created By: {{post.username}} Deadline: {{post.deadline}}</h6>
+    <h6 class="card-text">Requirements: {{post.requirements}}</h6>
+    {{#if loggedIn}}
+    <button id='update-btn' class='btn btn-primary log-sign' type='submit'>Update Post</button>
+        <button type="button" class="btn btn-primary log-sign" src="/update"/>I Want to Help</button>
+    {{/if}}
+   
+  </div>
+</div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+    </article>
+    {{#if loggedIn }}
+    <script src="../javascript/logout.js"></script>
+    {{/if}}
+    <div>
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJBhD25Oh977iUWwe6QM84YLjGF4g8joo"></script>
     </div>
     {{#if loggedIn }}
