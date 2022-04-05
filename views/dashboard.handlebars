@@ -15,10 +15,24 @@
           {{post.requirements}}
           When:
           {{post.deadline}}
-          <a href='/post/{{post.id}}'></a>
+          <a href='/helppost/{{post.id}}'></a>
         </div>
       </article>
     </li>
   {{/each}}
 </ol>
-
+<form>
+  <input type='text' id='post-title' placeholder='Title'/>
+  <input type='text' id='post-body' placeholder='Body'/>
+  <input type='text' id='post-deadline' placeholder='Deadline'/>
+  <input type='text' id='post-requirements' placeholder='Requirements'/>
+  <select name="tag" id="tag">
+    <option value="animal">Animal</option>
+    <option value="health">Health</option>
+    <option value="sports">Sports</option>
+    <option value="arts">Arts</option>
+    <option value="home repair">Home repair</option>
+  </select>
+  <button id="add-post-btn">Add Post</button>
+</form>
+<script src="javascript/add-post.js"
