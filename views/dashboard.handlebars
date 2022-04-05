@@ -1,4 +1,4 @@
-{{!-- <ol>
+<ol>
   {{#each posts as |post|}}
     <li>
       <article>
@@ -20,24 +20,5 @@
       </article>
     </li>
   {{/each}}
-</ol> --}}
+</ol>
 
-<div id="expand-box">
-  <div class="wrapper">
-   <div id="handlebars-sandbox"></div>
-    <div class="dashboard-content">
-      <div style="display: none;" id="posts">
-{{#each post}}   
-             {{#each this}}
-               <div class="panel">
-                <div class="column">
-                  <div id="title">Title: {{title}} <b>Posted By: {{username}}/5</b></div>
-                  <div id="description">Description: <b>{{description}}</b></div>
-                  <div id="Requirements">Date Created: {{created_at}}</div>
-                </div>
-              </div>
-             {{/each}}
-        
-        </div>
-      </div>
-    </div>
