@@ -17,7 +17,11 @@ Post.init(
        },
        username:{
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
+        references: {
+            model: 'user',
+            key: 'username'
+        }
        },
        body: {
         type: DataTypes.TEXT,

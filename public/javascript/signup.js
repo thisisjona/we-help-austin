@@ -18,11 +18,12 @@ async function signupFormHandler(event) {
         
         // check the response status
         if (response.ok) {
-            document.location.replace('/')
+            alert('Signup was successful')
+            document.location.replace('/dashboard')
         } else {
             alert(response.statusText);
         }
     }
 }
-//link to signup button
-document.querySelector('.signup-btn').addEventListener('submit', signupFormHandler);
+
+document.querySelector('#signup-btn').addEventListener('click', signupFormHandler);
