@@ -33,7 +33,6 @@ router.get('/:id', withAuth, (req, res) => {
     })
 });
 
-
 router.get('/:tag', withAuth, (req, res) => {
     Post.findAll({
         where: {
@@ -52,6 +51,19 @@ router.get('/:tag', withAuth, (req, res) => {
         res.status(500).json(err)
     })
 });
+
+router.post('/username', withAuth, (req, res) => {
+    Post.findAll({
+        where: {
+            username: req.session.username
+        }
+    })
+    .then(dbPostData => res.json(dbPostData))
+    .catch(err => {
+        console.log(err)
+        res.status(500).json(err)
+    })
+})
 
 router.post('/', withAuth, (req, res) => {
     Post.create({
