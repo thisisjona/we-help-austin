@@ -39,15 +39,17 @@ a:hover {
 }
 
 #nav-tree {
-  width: 2.5rem;
+  width: 3rem;
   border-radius: 50%;
   font-size: 5rem;
+  margin-left: 2rem;
 }
 
 #navbar-title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: #f7f9fb;
   padding-left: 1rem;
+  text-shadow: 2px 1px black;
 }
 
 .nav-link {
