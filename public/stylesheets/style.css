@@ -45,9 +45,22 @@ a:hover {
 }
 
 #navbar-title {
-  font-size: 1.5rem;
+  font-size: 3.5rem;
   color: #f7f9fb;
   padding-left: 1rem;
+}
+
+.nav-link {
+  color: #f7f9fb;
+  font-size: 1.5rem;
+}
+
+.nav-link:hover {
+  color: #31708e;
+}
+
+.nav-link-wrapper {
+  padding-left: 2.5rem;
 }
 
 .btn {
@@ -240,9 +253,43 @@ hr {
 }
 
 /* End about us page */
+
+/* homepage styles */
+.home-title {
+  position: relative;
+  font-size: 100px;
+  letter-spacing: -3px;
+  color: #31708e;
+  width: 50rem;
+}
+
+.home-title:after {
+  content: 'a fresh take on community building';
+  position: absolute;
+  left: 2px;
+  top: -7px;
+  color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  mix-blend-mode: multiply;
+}
 /* index page css carousel */
-.carousel-item {
+
+.d-block {
+  width: 75rem;
+  height: 45rem;
+  opacity: 0.6;
+}
+
+/* .carousel-item {
   min-height: 280px;
+} */
+
+.carousel-div {
+  margin: 0rem 0 4rem 30rem;
+  height: 45rem;
+  width: 75rem;
+  background-color: #000000;
 }
 /* end carousel */
 /* dashboard css start */
@@ -268,7 +315,6 @@ hr {
 
 /* falling leaves */
 
-
 .fallingLeaves {
   text-align: center;
   overflow: hidden;
@@ -289,40 +335,40 @@ hr {
 }
 
 .fallingLeaves .set div:nth-child(1) {
-  left:20%;
+  left: 20%;
   animation: animate 15s linear infinite;
   animation-delay: -7s;
 }
 .fallingLeaves .set div:nth-child(2) {
-  left:50%;
+  left: 50%;
   animation: animate 20s linear infinite;
   animation-delay: -5s;
 }
 .fallingLeaves .set div:nth-child(3) {
-  left:70%;
+  left: 70%;
   animation: animate 20s linear infinite;
   animation-delay: 0s;
 }
 .fallingLeaves .set div:nth-child(4) {
-  left:0%;
+  left: 0%;
   animation: animate 15s linear infinite;
   animation-delay: -5s;
 }
 .fallingLeaves .set div:nth-child(5) {
-  left:0%;
+  left: 0%;
   animation: animate 12s linear infinite;
 }
 .fallingLeaves .set div:nth-child(6) {
-  left:0%;
+  left: 0%;
   animation: animate 15s linear infinite;
   animation-delay: -5s;
 }
 .fallingLeaves .set div:nth-child(7) {
-  left:15%;
+  left: 15%;
   animation: animate 14s linear infinite;
 }
 .fallingLeaves .set div:nth-child(8) {
-  left:60%;
+  left: 60%;
   animation: animate 15s linear infinite;
 }
 @keyframes animate {
@@ -351,6 +397,3 @@ hr {
     transform: translateX(-20px) rotate(180deg);
   }
 }
-
-
-
