@@ -1,4 +1,5 @@
-<main class="main bg-dark">
+<main class="main bg-light">
+    <hr class="bg-white">
 <body data-new-gr-c-s-check-loaded="14.1055.0">
 <section class="section section-lg bg-soft">
     <div class="container">
@@ -11,24 +12,24 @@
                         </div>
                    <h2 class="h5 font-weight-normal text-center mt-3 mb-0">{{user.username}}</h2>
                    <div class="list-group dashboard-menu list-group-sm mt-4">
-                       <a href="/homepage" class="d-flex list-group-item list-group-item-action">Home
+                       <a href="/" class="d-flex list-group-item list-group-item-action">Home
                          <span class="icon icon-xs ml-auto">
-                             <span class="fas fa-chevron-right"></span>
+                             <span class="fas bi-caret-right"></span>
                          </span>
                         </a> 
                        <a href="/contactus" class="d-flex list-group-item list-group-item-action">Contact Us
                        <span class="icon icon-xs ml-auto">
-                             <span class="fas fa-chevron-right"></span>
+                             <span class="fas bi-caret-right"></span>
                          </span>
                         </a>
                        <a href="/dashboard" class="d-flex list-group-item list-group-item-action">Dashboard
                        <span class="icon icon-xs ml-auto">
-                             <span class="fas fa-chevron-right"></span>
+                             <span class="fas bi-caret-right"></span>
                          </span>
                         </a>
                        <a href="/about" class="d-flex list-group-item list-group-item-action">About
                        <span class="icon icon-xs ml-auto">
-                             <span class="fas fa-chevron-right"></span>
+                             <span class="fas bi-caret-right"></span>
                          </span>
                         </a>
                    </div>
@@ -39,7 +40,29 @@
           <div class="row justify-content-center">
              <div class="col-12 col-sm-10 col-md-6 col-lg-12">
                  <a href="/dashboard" class="btn btn-primary log-sign" type="submit">Make New Post</a>
-                 {{post}}
+                 <ol>
+  {{#each post as |user|}}
+    <li>
+      <article>
+        <div>
+          <a href='{{post.tag}}' target='_blank'>{{post.title}}</a>
+        </div>
+        <div>
+          {{post.description}}
+          Posted By:
+          {{post.username}}
+          Created on:
+          {{post.created_at}}
+          Requirements:
+          {{post.requirements}}
+          When:
+          {{post.deadline}}
+          <a href='/helppost/{{post.id}}'></a>
+        </div>
+      </article>
+    </li>
+  {{/each}}
+</ol>
 
                  </div>
              </div> 
@@ -47,12 +70,5 @@
         </div>
     </div>
 </section>
-
-<p>Welcome {{ user.username }}</p>
-{{ user.email }}
-
-{{!-- Need to connect user post to tags here --}}
-
-{{!-- Need to add user tag history here --}}
 </body> 
 </main>
