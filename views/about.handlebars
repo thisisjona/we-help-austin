@@ -1,6 +1,5 @@
 <HTML>
 <body>
-  
 <article class="about-content fallingLeaves">
 <section class="tree-container">
   <div class="tree-on"></div>
@@ -14,17 +13,32 @@
       <div><img src="/images/leaves3.png"></div>
       <div><img src="/images/leaves4.png"></div>
 </article>
-
-<hr>
-<h2>Our Mission</h2>
-<p>
-    We are a team of four full stack developers that come from totally different backgrounds that are a part of the best community in the world!  Austin, Texas Y'all!</p>
-</p>
-<hr>
-<h2>Meet our Software Engineers!</h2>
-<div class='album py-5 bg-light'>
+<h1 class="text-center bg-white text-success">Meet our Software Engineers!</h1>
+<div class='album py-5 bg-white'>
   <div class='container'>
     <div class='row row-cols-lg-4 g-3'>
+      {{! card 4 }}
+      <div class='col'>
+        <div class='card shadow-sm'>
+          <img src='/images/prof-pic4.jpg' alt='racoon' />
+
+          <div class='card-body'>
+            <p class='card-text'><a href="https://github.com/jorddo">Jordan Sneed</a></p>
+            <div class='d-flex justify-content-between align-items-center'>
+              <div class='btn-group'>
+                <button
+                  type='button'
+                  class='btn btn-sm btn-outline-secondary'
+                >View</button>
+                <button
+                  type='button'
+                  class='btn btn-sm btn-outline-secondary'
+                >Edit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       {{! card 1 start }}
       <div class='col'>
         <div class='card shadow-sm'>
@@ -78,28 +92,6 @@
           </div>
         </div>
       </div>
-      {{! card 4 }}
-      <div class='col'>
-        <div class='card shadow-sm'>
-          <img src='/images/prof-pic4.jpg' alt='racoon' />
-
-          <div class='card-body'>
-            <p class='card-text'><a href="https://github.com/jorddo">Jordan Sneed</a></p>
-            <div class='d-flex justify-content-between align-items-center'>
-              <div class='btn-group'>
-                <button
-                  type='button'
-                  class='btn btn-sm btn-outline-secondary'
-                >View</button>
-                <button
-                  type='button'
-                  class='btn btn-sm btn-outline-secondary'
-                >Edit</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>  
 </div>
@@ -107,22 +99,7 @@
 <hr>
 <br>
 <br>
-<h2>Email Us</h2>
-<div class="contact-copy subtitle">
-    <input type="text" value="wehelpaustin@gmail.com" id="myInput" >
-    <button class="btn btn-primary" onclick="emailUs()">Copy Email</button>
-<script>
-    function emailUs() {
-        var copyText = document.getElementById("myInput");
-        copyText.select();
-        copyText.setSelectionRange(0, 999999);
-        navigator.clipboard.writeText(copyText.value);
-        alert("Copied Email:" + copyText.value);
-    }
-</script>
 </div>
 </section>
-
-
 </body>
 </html>
