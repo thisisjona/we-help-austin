@@ -26,16 +26,19 @@
     <h5 class="card-title">Title: {{post.title}}</h5>
     <h6 class="card-subtitle mb-2 text-muted">Card subtitle{{post.id}}</h6>
     <p class="card-text">{{post.body}}</p>
-    <h6 class="card-text">Created By: {{post.username}} Deadline: {{post.deadline}}</h6>
+    <h6 class="card-text">Created By: {{post.username}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted"></h6>
+    <h6 class="card-text">Deadline: {{post.deadline}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted"></h6>
     <h6 class="card-text">Requirements: {{post.requirements}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
     {{#if loggedIn}}
-        <button type="button" class="btn btn-primary log-sign" src="/update"/>I Want to Help</button>
-        <button id='update-btn' class='btn btn-primary log-sign' type='submit'>Update Post</button>
+        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <button id='update-btn' class='btn btn-primary log-sign' type='submit'>I Want to Help</button>
     {{/if}}
    
   </div>
 </div>
-        
       </div>
     </div>
   </div>
@@ -48,4 +51,4 @@
     <script src="../javascript/logout.js"></script>
     <script src="../javascript/postPage.js"></script>
     {{/if}}
-  </body>
+</body>
