@@ -29,25 +29,31 @@
     <h5 class="card-title">Title: {{post.title}}</h5>
     <h6 class="card-subtitle mb-2 text-muted">Card subtitle{{post.id}}</h6>
     <p class="card-text">{{post.body}}</p>
-    <h6 class="card-text">Created By: {{post.username}} Deadline: {{post.deadline}}</h6>
+    <h6 class="card-text">Created By: {{post.username}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted"></h6>
+    <h6 class="card-text">Deadline: {{post.deadline}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted"></h6>
     <h6 class="card-text">Requirements: {{post.requirements}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
     {{#if loggedIn}}
       <div>
-            <button class="btn-primary" onclick="issueClosed()">Task Completed</button>
+            <button id="issueClosed" class="btn btn-primary log-sign">Task Completed</button>
           </div>
-          <script>
-            function issueClosed() { 
-              var myText = "Remember to rate your helper.";
-              alert (myText);
-              };
-          </script>
+          <script type="text/javascript">
+    document.getElementById("issueClosed").onclick = function () {
+        location.href = "/dashboard";
+    };
+</script>
+<h6 class="card-subtitle mb-2 text-muted"></h6>
+<h6 class="card-subtitle mb-2 text-muted"></h6>
+<button id="chat" class="btn btn-primary log-sign">Click to Chat</button>
+          </div>
+          <script type="text/javascript">
+    document.getElementById("chat").onclick = function () {
+        location.href="/chat.html"
+    };
+</script>
     {{/if}}
-  <div class="star-container">
-      <span id="rateMe3" class="rating-faces"></span>
-    </div>
-    <script>
-      $('#rateMe3').mdbRate(); });
-    </script> 
   </div>
 </div>
       </div>
