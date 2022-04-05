@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:id', withAuth, (req, res) => {
     Post.findOne({
         where: {
             id: req.params.id
@@ -24,7 +24,8 @@ router.get('/:id', (req, res) => {
             res.status(404).json({ message: 'No post with that id found'})
             return;
         }
-        res.json(dbPostData);
+        const post = dbPostData.get({ plain: true })
+        res.render('post', {post, loggedIn: true})
     })
     .catch(err => {
         console.log(err)
@@ -33,7 +34,7 @@ router.get('/:id', (req, res) => {
 });
 
 
-router.get('/:tag', (req, res) => {
+router.get('/:tag', withAuth, (req, res) => {
     Post.findAll({
         where: {
             tag: req.params.tag
@@ -61,7 +62,10 @@ router.post('/', withAuth, (req, res) => {
         tag: req.body.tag,
         requirements: req.body.requirements
     })
-    .then(dbPostData => res.json(dbPostData))
+    .then(dbPostData => {
+        const post = dbPostData.get({ plain: true })
+        res.json({post});
+    })
     .catch(err => {
         console.log(err)
         res.status(500).json(err)

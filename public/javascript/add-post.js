@@ -7,8 +7,9 @@ async function newPost(event) {
     const requirements = document.querySelector('#post-requirements').value.trim();
     const tag = document.querySelector('#tag').value;
 
-    const response = await fetch(`/helpPost/`, {
-        method: 'POST',
+    if (title && body && tag){
+    const response = await fetch(`/helpPost`, {
+        method: 'post',
         body: JSON.stringify({
             title,
             body,
@@ -19,15 +20,14 @@ async function newPost(event) {
         headers: {
             'Content-Type': 'application/json'
         }
-    });
-
-    if (response.ok) {
-        console.log(response)
-        id = response.id
-        document.location.replace(`/post/${id}`);
-    } else {
-        alert(response.statusText);
-    }
-}
+    })
+    .then(response => response.json())
+    .then(data => {
+        const id = data.post.id
+        document.location.replace(`/helppost/${id}`)
+    })} else {
+        alert('Please fill out the appropriate fields')
+    };
+};
 // link to post form
-document.querySelector('.new-post-form').addEventListener('submit', newPost);
+document.querySelector('#add-post-btn').addEventListener('click', newPost);
