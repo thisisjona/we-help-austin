@@ -14,7 +14,7 @@
       </div>
       <div>
         Posted by:
-        {{post.username}}
+        <p id="postUser">{{post.username}}</p>
         When:
         {{post.deadline}}
         Date Posted:
@@ -25,11 +25,6 @@
         {{post.tag}}
       </div>
     </article>
-  
-
-    {{#if loggedIn }}
-    <script src="../javascript/logout.js"></script>
-    {{/if}}
     <div>
       {{! Google maps.  API is restricted. }}
       <iframe
@@ -42,7 +37,12 @@
         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBJBhD25Oh977iUWwe6QM84YLjGF4g8joo&q=Austin+TX"
       >
       </iframe>
+      <button id='update-btn' class='btn btn-primary log-sign' type='submit'>Update Post</button>
 
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJBhD25Oh977iUWwe6QM84YLjGF4g8joo"></script>
     </div>
+    {{#if loggedIn }}
+    <script src="../javascript/logout.js"></script>
+    <script src="../javascript/postPage.js"></script>
+    {{/if}}
   </body>
