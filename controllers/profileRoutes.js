@@ -8,13 +8,7 @@ router.get('/', withAuth, (req, res) => {
         attributes: { exclude: ['password'] },
         where: {
             username: req.session.username
-        },
-        include:[
-            {
-                model: Post,
-                attributes: ['title', 'username', 'body', 'tag', 'created_at']
-            }
-        ]
+        }
     })
     .then(dbUserData => {
         if (!dbUserData) {
@@ -22,7 +16,7 @@ router.get('/', withAuth, (req, res) => {
             return;
         }
         const user = dbUserData.get( {plain: true })
-        res.render('user-view', { user, loggedIn: true });
+        res.render('user-view', { user, loggedIn: true })
     })
     .catch(err => {
         console.log(err)

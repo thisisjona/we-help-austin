@@ -3,10 +3,11 @@
     <li>
       <article>
         <div>
-          <a href='{{post.tag}}' target='_blank'>{{post.title}}</a>
+          <a href='/helppost/{{post.id}}' target='_blank'>{{post.title}}</a>
+          Tag: {{post.tag}}
         </div>
         <div>
-          {{post.description}}
+          {{post.body}}
           Posted By:
           {{post.username}}
           Created on:
@@ -15,7 +16,6 @@
           {{post.requirements}}
           When:
           {{post.deadline}}
-          <a href='/helppost/{{post.id}}'></a>
         </div>
       </article>
     </li>
