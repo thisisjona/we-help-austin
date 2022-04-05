@@ -258,12 +258,15 @@ hr {
 /* End about us page */
 
 /* homepage styles */
+/* a fresh take on community h1 */
 .home-title {
-  position: relative;
+  position: absolute;
   font-size: 100px;
   letter-spacing: -3px;
   color: #31708e;
   width: 50rem;
+  /* transform: translateX(50%); */
+  z-index: 1;
 }
 
 .home-title:after {
@@ -278,23 +281,29 @@ hr {
 }
 /* index page css carousel */
 
+.homepage-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* pictures inside carousel */
 .d-block {
   width: 75rem;
   height: 45rem;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
-/* .carousel-item {
-  min-height: 280px;
-} */
-
+/* full carousel */
 .carousel-div {
-  margin: 0rem 0 4rem 30rem;
+  margin: 5rem auto 4rem;
   height: 45rem;
-  width: 75rem;
+  max-width: 50%;
   background-color: #000000;
 }
 /* end carousel */
+
 /* dashboard css start */
 .wrapper {
   margin: 0 auto;
@@ -400,4 +409,3 @@ hr {
     transform: translateX(-20px) rotate(180deg);
   }
 }
-
