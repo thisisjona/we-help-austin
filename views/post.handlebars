@@ -1,13 +1,12 @@
 <body>
     <article>
       <div>
-        <a href="{{post.tag}}" target="_blank">{{post.title}}</a>
+        <h1>{{post.title}}</h1>
         {{#if loggedIn}}
           <div>
              <button class="btn-primary" onclick="post-update"/>I Want to Help</button>
           </div>
         {{/if}}
-        <span>({{post.id}})</span>
         
       </div>
       <div>
@@ -19,13 +18,11 @@
         When:
         {{post.deadline}}
         Date Posted:
-        {{post.created_at}}
+        {{post.createdAt}}
         Requirements:
         {{post.requirements}}
         Tags:
-        {{post.tags}}
-        |
-        {{post.id}}">
+        {{post.tag}}
       </div>
     </article>
   

@@ -6,6 +6,7 @@ const withAuth = require('../utils/auth');
 router.get('/', withAuth, (req, res) => {
     Post.findAll({
         attributes: [
+            'id',
             'title',
             'username',
             'body',
