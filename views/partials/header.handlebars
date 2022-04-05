@@ -10,7 +10,7 @@
         class='align-middle'
       /><a href='/' id='navbar-title'>We Help Austin</a>
     </a>
-    <div class='collapse navbar-collapse' id='navbarSupportedContent'>
+    <div class='collapse navbar-collapse nav-link-wrapper' id='navbarSupportedContent'>
       <ul class="navbar-nav">
         {{#if loggedIn}}
         <li class="nav-item">
@@ -25,7 +25,7 @@
     <div class='d-grid gap-2 d-md-flex justify-content-md-end'>
       {{#if loggedIn}}
       <form action='/'>
-         <button id='logout-btn' class='btn btn-primary log-sign' type='submit'>Loggout</button>
+         <button id='logout-btn' class='btn btn-primary log-sign' type='submit'>Log Out</button>
       </form>
       {{else}}
       <form action='/login' />
