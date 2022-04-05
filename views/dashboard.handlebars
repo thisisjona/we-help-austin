@@ -1,41 +1,46 @@
-<form>
-  <div class="my-3">
-  <input type='text' id='post-title' placeholder='Title'/>
-  <input type='text' id='post-body' placeholder='Body'/>
-  <input type='text' id='post-deadline' placeholder='Deadline'/>
-  <input type='text' id='post-requirements' placeholder='Requirements'/>
-  <select name="tag" id="tag">
-    <option value="animal">Animal</option>
-    <option value="health">Health</option>
-    <option value="sports">Sports</option>
-    <option value="arts">Arts</option>
-    <option value="home repair">Home repair</option>
-  </select>
-  <button id="add-post-btn">Add Post</button>
+<form class='container'>
+  <div class='my-3'>
+    <input type='text' id='post-title' placeholder='Title' />
+    <input type='text' id='post-body' placeholder='Body' />
+    <input type='text' id='post-deadline' placeholder='Deadline' />
+    <input type='text' id='post-requirements' placeholder='Requirements' />
+    <select name='tag' id='tag'>
+      <option value='animal'>Animal</option>
+      <option value='health'>Health</option>
+      <option value='sports'>Sports</option>
+      <option value='arts'>Arts</option>
+      <option value='home repair'>Home repair</option>
+    </select>
+    <button id='add-post-btn'>Add Post</button>
   </div>
 </form>
-<script src="javascript/add-post.js"></script>
-<div >
+<script src='javascript/add-post.js'></script>
+<div class='container'>
   {{#each posts as |post|}}
     <div>
-      <article class="card">
-        <div class="card-header">
+      <article class='card'>
+        <div class='card-header'>
           <a href='{{post.tag}}' target='_blank'>{{post.title}}</a>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">{{post.body}}</li>
-          <li class="list-group-item"> Posted By:
-          {{post.username}}</li>
-          <li class="list-group-item">  Created on:
-          {{post.created_at}}</li> 
-          <li class="list-group-item">Requirements:
-          {{post.requirements}}</li>
-          <li class="list-group-item">When:
-          {{post.deadline}}</li>
-          <a href='/post/{{post.id}}' class="list-group-item " style="color: black;"></a>
+        <ul class='list-group list-group-flush'>
+          <li class='list-group-item'>{{post.body}}</li>
+          <li class='list-group-item'>
+            Posted By:
+            {{post.username}}</li>
+          <li class='list-group-item'>
+            Created on:
+            {{post.created_at}}</li>
+          <li class='list-group-item'>Requirements:
+            {{post.requirements}}</li>
+          <li class='list-group-item'>When:
+            {{post.deadline}}</li>
+          <a
+            href='/post/{{post.id}}'
+            class='list-group-item'
+            style='color: black;'
+          ></a>
         </ul>
       </article>
     </div>
   {{/each}}
 </div>
-
