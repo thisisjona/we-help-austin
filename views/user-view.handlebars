@@ -40,52 +40,16 @@
           <div class="row justify-content-center">
              <div class="col-12 col-sm-10 col-md-6 col-lg-12">
                  <a href="/dashboard" class="btn btn-primary log-sign" type="submit">Make New Post</a>
-                 <ol>
-  {{#each post as |user|}}
-    <li>
-      <article>
-        <div>
-          <a href='{{post.tag}}' target='_blank'>{{post.title}}</a>
-        </div>
-        <div>
-          {{post.description}}
-          Posted By:
-          {{post.username}}
-          Created on:
-          {{post.created_at}}
-          Requirements:
-          {{post.requirements}}
-          When:
-          {{post.deadline}}
-          <a href='/helppost/{{post.id}}'></a>
-        </div>
-      </article>
-    </li>
-  {{/each}}
-</ol>
+  <ol id="posts">
+    {{!-- posts added by javascript here --}}
+    </ol>
 
-<<<<<<< HEAD
-<h1>Welcome</h1>
-<h2 id="username">
-{{ user.username }}
-</h2>
-<div>
-{{ user.email }}
-</div>
-<div>
-    <ul id="posts">
-        {{!-- adding post elements here with javascript --}}
-    </ul>
-</div>
-
-<script src="/javascript/getUserPosts.js"></script>
-=======
                  </div>
              </div> 
           </div>  
         </div>
     </div>
 </section>
+<script src="/javascript/getUserPosts.js"></script>
 </body> 
 </main>
->>>>>>> main

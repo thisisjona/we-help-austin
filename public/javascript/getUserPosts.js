@@ -1,12 +1,7 @@
 async function getUserPosts() {
-    const username = document.querySelector('#username').innerHTML;
     const postsContainer = document.querySelector('#posts');
-    if (username) {
         const response = await fetch('/helpPost/username', {
             method: 'post',
-            // body: JSON.stringify({
-            //     username: username
-            // }),
             headers: { 'Content-Type': 'application/json' }
         })
         .then(response => response.json())
@@ -42,6 +37,4 @@ async function getUserPosts() {
 
         )
     }
-} 
-
 getUserPosts();

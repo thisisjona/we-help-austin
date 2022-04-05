@@ -34,8 +34,8 @@ router.get('/contactus', (req, res) => {
     res.render('contactus')
 });
 
-router.get('/post', (req, res) => {
-    res.render('post');
+router.get('/postUpdate', (req, res) => {
+    res.render('post-update', {loggedIn: true });
 });
 
 module.exports = router;

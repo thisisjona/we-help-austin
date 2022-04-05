@@ -5,9 +5,6 @@
         <div class="row no-gutters align-items-center">
           <div class="col-12 col-lg-6 col-xl-8">
             <div class="card-img p-2 rounded-xl">
-    {{#if loggedIn }}
-    <script src="../javascript/logout.js"></script>
-    {{/if}}
     <div>
       {{! Google maps.  API is restricted at the highest setting so it can't be used by others. }}
       <iframe
@@ -32,8 +29,8 @@
     <h6 class="card-text">Created By: {{post.username}} Deadline: {{post.deadline}}</h6>
     <h6 class="card-text">Requirements: {{post.requirements}}</h6>
     {{#if loggedIn}}
-    <button id='update-btn' class='btn btn-primary log-sign' type='submit'>Update Post</button>
         <button type="button" class="btn btn-primary log-sign" src="/update"/>I Want to Help</button>
+        <button id='update-btn' class='btn btn-primary log-sign' type='submit'>Update Post</button>
     {{/if}}
    
   </div>
@@ -44,9 +41,6 @@
   </div>
 </div>
     </article>
-    {{#if loggedIn }}
-    <script src="../javascript/logout.js"></script>
-    {{/if}}
     <div>
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJBhD25Oh977iUWwe6QM84YLjGF4g8joo"></script>
     </div>
