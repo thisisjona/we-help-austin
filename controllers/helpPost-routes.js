@@ -46,8 +46,6 @@ router.post('/checkUser', withAuth, (req, res) => {
         }
         const user = req.session.username
         const post = dbPostData.get({ plain: true })
-        console.log(user)
-        console.log(post.username)
         if (user === post.username) {
             res.json({check: true})
         } else {
@@ -67,8 +65,13 @@ router.get('/update/:id', withAuth, (req, res) => {
             res.status(404).json({ message: 'No post with that id found'})
             return;
         }
+        const user = req.session.username
         const post = dbPostData.get({ plain: true })
-        res.render('post-update', {post, loggedIn: true})
+        if (user === post.username) {
+            res.render('post-update', {post, loggedIn: true})
+        } else {
+            res.render('homepage');
+        }
     })
     .catch(err => {
         console.log(err)
