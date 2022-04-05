@@ -36,20 +36,11 @@
       <div>
             <button id="issueClosed" class="btn btn-primary log-sign">Task Completed</button>
           </div>
-          <script type="text/javascript">
-    document.getElementById("issueClosed").onclick = function () {
-        location.href = "/dashboard";
-    };
 </script>
 <h6 class="card-subtitle mb-2 text-muted"></h6>
 <h6 class="card-subtitle mb-2 text-muted"></h6>
 <button id="chat" class="btn btn-primary log-sign">Click to Chat</button>
           </div>
-          <script type="text/javascript">
-    document.getElementById("chat").onclick = function () {
-        location.href="/chat.html"
-    };
-</script>
     {{/if}}
   </div>
 </div>
@@ -60,6 +51,7 @@
     </article>
     {{#if loggedIn }}
     <script src="../../javascript/logout.js"></script>
+    <script src="../../javascript/updatePost.js"></script>
     {{/if}}
     <div>
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJBhD25Oh977iUWwe6QM84YLjGF4g8joo"></script>
