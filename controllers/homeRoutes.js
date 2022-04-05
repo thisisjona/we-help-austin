@@ -27,11 +27,19 @@ router.get('/signUp', (req, res) => {
 });
 
 router.get('/about', (req, res) => {
-    res.render('about')
+    if (req.session.loggedIn) {
+        res.render('about',  {loggedIn: true});
+    } else {
+        res.render('about');
+    }
 });
 
 router.get('/contactus', (req, res) => {
-    res.render('contactus')
+    if (req.session.loggedIn) {
+        res.render('contactus',  {loggedIn: true});
+    } else {
+        res.render('contactus');
+    }
 });
 
 router.get('/postUpdate', (req, res) => {

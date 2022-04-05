@@ -33,6 +33,49 @@ router.get('/:id', withAuth, (req, res) => {
     })
 });
 
+router.post('/checkUser', withAuth, (req, res) => {
+    Post.findOne({
+        where: {
+            id: req.body.id
+        }
+    })
+    .then(dbPostData => {
+        if (!dbPostData) {
+            res.status(404).json({ message: 'No post with that id found'})
+            return;
+        }
+        const user = req.session.username
+        const post = dbPostData.get({ plain: true })
+        console.log(user)
+        console.log(post.username)
+        if (user === post.username) {
+            res.json({check: true})
+        } else {
+            res.json({check: false})
+        }
+    })
+});
+
+router.get('/update/:id', withAuth, (req, res) => {
+    Post.findOne({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(dbPostData => {
+        if (!dbPostData) {
+            res.status(404).json({ message: 'No post with that id found'})
+            return;
+        }
+        const post = dbPostData.get({ plain: true })
+        res.render('post-update', {post, loggedIn: true})
+    })
+    .catch(err => {
+        console.log(err)
+        res.status(500).json(err)
+    })
+});
+
 router.get('/:tag', withAuth, (req, res) => {
     Post.findAll({
         where: {
