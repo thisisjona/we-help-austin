@@ -12,7 +12,8 @@ router.get('/', withAuth, (req, res) => {
             'body',
             'deadline',
             'tag',
-            'requirements'
+            'requirements',
+            'createdAt'
         ]
     })
     .then(dbPostData => {

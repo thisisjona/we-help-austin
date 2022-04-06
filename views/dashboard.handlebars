@@ -18,27 +18,22 @@
 <div class='container'>
   {{#each posts as |post|}}
     <div>
-      <article class='card'>
-        <div class='card-header'>
-          <a href='{{post.tag}}' target='_blank'>{{post.title}}</a>
+      <article class="card">
+        <div class="card-header">
+          <a href='/helppost/{{post.id}}'>{{post.title}}</a>
         </div>
-        <ul class='list-group list-group-flush'>
-          <li class='list-group-item'>{{post.body}}</li>
-          <li class='list-group-item'>
-            Posted By:
-            {{post.username}}</li>
-          <li class='list-group-item'>
-            Created on:
-            {{post.created_at}}</li>
-          <li class='list-group-item'>Requirements:
-            {{post.requirements}}</li>
-          <li class='list-group-item'>When:
-            {{post.deadline}}</li>
-          <a
-            href='/post/{{post.id}}'
-            class='list-group-item'
-            style='color: black;'
-          ></a>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{post.body}}</li>
+          <li class="list-group-item"> Posted By:
+          {{post.username}}</li>
+          <li class="list-group-item">  Created on:
+          {{post.createdAt}}</li> 
+          <li class="list-group-item">Requirements:
+          {{post.requirements}}</li>
+          <li class="list-group-item">When:
+          {{post.deadline}}</li>
+          <li class="list-group-item">Tag:
+          {{post.tag}}</li>
         </ul>
       </article>
     </div>
