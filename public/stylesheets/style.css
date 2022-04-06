@@ -412,3 +412,17 @@ hr {
     transform: translateX(-20px) rotate(180deg);
   }
 }
+
+/* chat css */
+.messages {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 3rem;
+}
+.messages li {
+  padding: 0.5rem;
+}
+.messages li:nth-child(odd) {
+  background: #eee;
+}
+

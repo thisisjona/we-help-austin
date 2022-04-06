@@ -23,12 +23,9 @@ const sess = {
 //Added CORS middleware
 const cors = require('cors');
 app.use(cors());
-//connects to client side
-// app.get("/", (req, res) => {
-//   res.sendFile(__dirname + "/index.html");
-// });
+
 //starting https server
-var http = require('http').createServer(app);
+const http = require('http').createServer(app);
 //added cors middleware to allow cross origin requests in the browser
 const io = require('socket.io')(http, {
   cors: {
@@ -38,32 +35,27 @@ const io = require('socket.io')(http, {
     credentials: true,
   },
 });
-//create user array
-const users = {};
-// **Will need to get user to connect with thier name here
-// opening socket
+
+// Opening socket
+const port2 = process.env.PORT || 3000;
 io.on('connection', (socket) => {
-  socket.on('chat message', (msg) => {
-    io.emit('chat message', msg);
+  socket.on('user_join', (data) => {
+    this.username = data;
+    socket.broadcast.emit("user_join", data);
   });
-  socket.on('send chat message', (msg) => {
-    socket.broadcast.emit('chat message', {
-      message: message,
-      name: users[socket.id],
+  socket.on('chat_message', (data) => {
+    data.username = this.username;
+    socket.broadcast.emit('chat_message', data) 
     });
     socket.on('disconnect', () => {
-      socket.broadcast.emit('user disconnected', users[socket.id]);
-      delete users[socket.id];
+      socket.broadcast.emit('user_disconnected', this.username);
     });
   });
-});
 
-http.listen(3000, function () {
+http.listen(port2, function () {
   console.log('Server started at 3000...');
-  io.on('connection', function (socket) {
-    console.log('user connected: ' + socket.id);
   });
-});
+
 //End Chat
 
 const PORT = process.env.PORT || 3001;
