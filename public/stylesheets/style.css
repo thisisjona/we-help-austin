@@ -1,15 +1,3 @@
-/* .index {
-  padding-top: 5px;
-  background-image: url('../images/mplifting.avif');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}  */
-
-main {
-  background-color: #f7f9fb;
-}
-
 body,
 html {
   font-family: 'Inconsolata', sans-serif;
@@ -34,6 +22,7 @@ a:hover {
 
 /* NAV STYLES */
 .navbar {
+  font-family: 'Roboto', sans-serif;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   background-color: #687864;
 }
@@ -96,6 +85,7 @@ body {
 }
 
 .card {
+  font-family: 'Roboto', sans-serif;
   margin-bottom: 1rem;
   padding: 3rem 4rem;
   color: #f7f9fb;
@@ -197,12 +187,6 @@ hr {
   width: 400px;
 }
 
-/* #about-us-title {
-  font-size: 2rem;
-  color: #222;
-  text-shadow: 0px 2px 3px #555;
-} */
-
 #about-us-title {
   display: inline;
   position: relative;
@@ -261,6 +245,7 @@ hr {
 /* a fresh take on community h1 */
 .home-title {
   position: absolute;
+  font-family: 'Inconsolata', sans-serif;
   font-size: 100px;
   letter-spacing: -3px;
   color: #31708e;
