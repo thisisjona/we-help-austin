@@ -7,7 +7,6 @@ async function getUserPosts() {
         .then(response => response.json())
         .then(posts => {
             posts.map((post) => {
-                console.log(post)
                 //create container elements
                 const listEl = document.createElement('li');
                 const titleEl = document.createElement('a');

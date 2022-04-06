@@ -39,15 +39,17 @@ a:hover {
 }
 
 #nav-tree {
-  width: 2.5rem;
+  width: 3rem;
   border-radius: 50%;
   font-size: 5rem;
+  margin-left: 2rem;
 }
 
 #navbar-title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: #f7f9fb;
   padding-left: 1rem;
+  text-shadow: 2px 1px black;
 }
 
 .nav-link {
@@ -258,12 +260,15 @@ hr {
 /* End about us page */
 
 /* homepage styles */
+/* a fresh take on community h1 */
 .home-title {
-  position: relative;
+  position: absolute;
   font-size: 100px;
   letter-spacing: -3px;
   color: #31708e;
   width: 50rem;
+  /* transform: translateX(50%); */
+  z-index: 1;
 }
 
 .home-title:after {
@@ -278,23 +283,29 @@ hr {
 }
 /* index page css carousel */
 
+.homepage-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* pictures inside carousel */
 .d-block {
   width: 75rem;
   height: 45rem;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
-/* .carousel-item {
-  min-height: 280px;
-} */
-
+/* full carousel */
 .carousel-div {
-  margin: 0rem 0 4rem 30rem;
+  margin: 5rem auto 4rem;
   height: 45rem;
-  width: 75rem;
+  max-width: 50%;
   background-color: #000000;
 }
 /* end carousel */
+
 /* dashboard css start */
 .wrapper {
   margin: 0 auto;
@@ -400,4 +411,3 @@ hr {
     transform: translateX(-20px) rotate(180deg);
   }
 }
-
