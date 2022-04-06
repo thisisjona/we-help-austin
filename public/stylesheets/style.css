@@ -300,6 +300,19 @@ hr {
   width: 100%;
 }
 
+/* .dash-form {
+
+} */
+
+.dash-card {
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 1rem;
+  padding: 3rem 4rem;
+  color: #f7f9fb;
+  background-color: #687864;
+  box-shadow: 2px 2px 4px #000000;
+}
+
 #handlebars-sandbox {
   padding: 8px;
   display: grid;
