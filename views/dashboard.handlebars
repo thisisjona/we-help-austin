@@ -1,4 +1,4 @@
-<form class='container'>
+<form class='container dash-form'>
   <div class='my-3'>
     <input type='text' id='post-title' placeholder='Title' />
     <input type='text' id='post-body' placeholder='Body' />
@@ -24,15 +24,11 @@
     <button id='find-post-btn'>Find By Tag</button>
   </div>
 </form>
-<script src='../javascript/add-post.js'></script>
-<script src="../javascript/postTags.js"></script>
-<script src='javascript/add-post.js'></script>
-<script src="javascript/postTags.js"></script>
 <div id='posts-container' class='container'>
   {{#each posts as |post|}}
     <div>
-      <article class="card">
-        <div class="card-header">
+      <article class='card dash-card'>
+        <div class='card-header'>
           <a href='/helppost/{{post.id}}'>{{post.title}}</a>
         </div>
         <ul class="list-group list-group-flush">
