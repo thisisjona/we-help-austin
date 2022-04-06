@@ -79,25 +79,6 @@ router.get('/update/:id', withAuth, (req, res) => {
     })
 });
 
-router.get('/:tag', withAuth, (req, res) => {
-    Post.findAll({
-        where: {
-            tag: req.params.tag
-        }
-    })
-    .then(dbPostData => {
-        if (!dbPostData) {
-            res.status(404).json({ message: 'No post with that tag found'})
-            return;
-        }
-        res.json(dbPostData);
-    })
-    .catch(err => {
-        console.log(err)
-        res.status(500).json(err)
-    })
-});
-
 router.post('/username', withAuth, (req, res) => {
     Post.findAll({
         where: {
