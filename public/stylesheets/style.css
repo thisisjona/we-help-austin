@@ -84,7 +84,7 @@ body {
   color: rgb(189, 196, 203);
 }
 
-.card {
+.footer-card {
   font-family: 'Roboto', sans-serif;
   margin-bottom: 1rem;
   padding: 3rem 4rem;
@@ -288,6 +288,11 @@ hr {
   background-color: #000000;
 }
 /* end carousel */
+
+/* user-view/post */
+.new-post-btn {
+  margin-bottom: 1rem;
+}
 
 /* dashboard css start */
 .wrapper {
