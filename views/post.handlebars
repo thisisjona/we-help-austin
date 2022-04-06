@@ -1,8 +1,8 @@
 <body>
   <hr class="bg-light">
     <article class="container text-dark ">
-      <div class="card border-light mb-3">
-        <div class="row no-gutters align-items-center">
+      <div class="card border-light mb-3 page-wrap">
+        <div class="row no-gutters align-items-center post-wrap">
           <div class="col-12 col-lg-6 col-xl-8">
             <div class="card-img p-2 rounded-xl">
     <div>
@@ -21,22 +21,26 @@
         </div>
       </div>
 
-  <div class="card col-12 col-lg-6 col-xl-4 border-light" style="width: 18rem;">
+  <div class="card col-12 col-lg-6 col-xl-4 border-light user-post" >
   <div class="card-body">
-    <h5 class="card-title">Title: {{post.title}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Post Id: {{post.id}}</h6>
-    <p class="card-text">{{post.body}}</p>
-    <h6 class="card-text">Created By: {{post.username}}</h6>
-    <h6 class="card-subtitle mb-2 text-muted"></h6>
-    <h6 class="card-text">Deadline: {{post.deadline}}</h6>
-    <h6 class="card-subtitle mb-2 text-muted"></h6>
-    <h6 class="card-text">Requirements: {{post.requirements}}</h6>
-    <h6 class="card-subtitle mb-2 text-muted"></h6>
+    <div class="post-title">
+      <h5 class="card-title help-title">{{post.title}}</h5>
+      <h6 class="card-subtitle mb-2">Post Id: {{post.id}}</h6>
+    </div>
+    <div class="post-content">
+      <p class="card-text post-text">{{post.body}}</p>
+      <h6 class="card-text"><span class="post-bold">Created By:</span> {{post.username}}</h6>
+      <h6 class="card-subtitle mb-2 text-muted"></h6>
+      <h6 class="card-text"><span class="post-bold">Deadline:</span> {{post.deadline}}</h6>
+      <h6 class="card-subtitle mb-2 text-muted"></h6>
+      <h6 class="card-text"><span class="post-bold">Requirements:</span> {{post.requirements}}</h6>
+      <h6 class="card-subtitle mb-2 text-muted"></h6>
+    </div>
     {{#if loggedIn}}
         <h6 class="card-subtitle mb-2 text-muted"></h6>
         <button id='update-btn' class='btn btn-primary log-sign' type='submit'>I Want to Help</button>
     {{/if}}
-   
+
   </div>
 </div>
       </div>

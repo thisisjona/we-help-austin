@@ -21,6 +21,14 @@ a:hover {
 }
 
 /* NAV STYLES */
+.nav-wrapper {
+  display: flex;
+}
+
+.nav-content {
+  flex-grow: inherit;
+}
+
 .navbar {
   font-family: 'Roboto', sans-serif;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
@@ -78,7 +86,7 @@ main {
 
 /* FOOTER STYLES */
 body {
-  background-color: #f3f6fd;
+  background-color: white;
   font-size: 1rem;
   font-weight: bold;
   color: rgb(189, 196, 203);
@@ -159,6 +167,51 @@ hr {
 
 .logsign-logo {
   background-color: #31708e;
+}
+
+/* user view & post */
+
+/* .page-wrap {
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+/* .post-wrap {
+  flex-wrap: inherit;
+} */
+
+.user-post {
+  box-shadow: 2px 2px 4px #000000;
+  padding: 2rem;
+  max-width: fit-content;
+  background-color: #687864;
+}
+
+.post-title {
+  border: 1px solid #000000;
+  text-align: center;
+  padding: 1rem;
+  background-color: white;
+}
+
+.help-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.post-content {
+  margin: 1rem 0 1rem 0;
+  padding: 0 1rem 1rem 1rem;
+  border: 1px solid #000000;
+  background-color: white;
+}
+
+.post-bold {
+  font-size: 1.3rem;
+}
+
+.post-text {
+  padding: 2rem 0 2rem 0;
 }
 
 /* About us page */
@@ -266,7 +319,7 @@ hr {
 }
 /* index page css carousel */
 
-.homepage-wrapper {
+.main-wrapper {
   position: relative;
   display: flex;
   justify-content: center;
@@ -425,4 +478,11 @@ hr {
 .messages li:nth-child(odd) {
   background: #eee;
 }
+/* Misc Borders and Fonts*/
+.misc-border {
+  border-color: #687864;
+}
 
+.misc-font {
+  color: #687864;
+}
