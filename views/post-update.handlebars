@@ -24,14 +24,14 @@
   <div class="card col-12 col-lg-6 col-xl-4 border-light" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">Title: {{post.title}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle{{post.id}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted">Post Id: {{post.id}}</h6>
     <p class="card-text">{{post.body}}</p>
     <h6 class="card-text">Created By: {{post.username}}</h6>
     <h6 class="card-subtitle mb-2 text-muted"></h6>
     <h6 class="card-text">Deadline: {{post.deadline}}</h6>
     <h6 class="card-subtitle mb-2 text-muted"></h6>
     <h6 class="card-text">Requirements: {{post.requirements}}</h6>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <h6 class="card-subtitle mb-2 text-muted"></h6>
     {{#if loggedIn}}
       <div>
             <button id="issueClosed" class="btn btn-primary log-sign">Task Completed</button>
