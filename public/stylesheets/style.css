@@ -132,8 +132,6 @@ ul > li {
 }
 
 ul > li:hover {
-  color: #8fc1e3;
-  cursor: pointer;
   text-decoration: none;
 }
 
