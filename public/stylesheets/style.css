@@ -438,3 +438,11 @@ hr {
 .messages li:nth-child(odd) {
   background: #eee;
 }
+/* Misc Borders and Fonts*/
+.misc-border {
+  border-color: #687864;
+}
+
+.misc-font{
+  color: #687864;
+}
