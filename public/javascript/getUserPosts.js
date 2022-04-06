@@ -1,3 +1,9 @@
+function format_date (date) {
+        return `${new Date(date).getMonth() + 1}/${new Date(date).getDate()}/${new Date(
+          date
+        ).getFullYear()}`;
+}
+
 async function getUserPosts() {
     const postsContainer = document.querySelector('#posts');
         const response = await fetch('/helpPost/username', {
@@ -19,7 +25,7 @@ async function getUserPosts() {
                 titleEl.innerHTML = post.title;
                 titleEl.setAttribute('href', `/helppost/${post.id}`)
                 bodyEl.innerHTML = post.body;
-                createdAtEl.innerHTML = post.createdAt;
+                createdAtEl.innerHTML = format_date(post.createdAt);
                 requirementsEl.innerHTML = post.requirements;
                 tagEl.innerHTML = post.tag;
                 deadlineEl.innerHTML = post.deadline;

@@ -13,9 +13,22 @@
     </select>
     <button id='add-post-btn'>Add Post</button>
   </div>
+  <div>
+    <select name='tag' id='tag-options'>
+      <option value='animal'>Animal</option>
+      <option value='health'>Health</option>
+      <option value='sports'>Sports</option>
+      <option value='arts'>Arts</option>
+      <option value='home repair'>Home repair</option>
+    </select>
+    <button id='find-post-btn'>Find By Tag</button>
+  </div>
 </form>
+<script src='../javascript/add-post.js'></script>
+<script src="../javascript/postTags.js"></script>
 <script src='javascript/add-post.js'></script>
-<div class='container'>
+<script src="javascript/postTags.js"></script>
+<div id='posts-container' class='container'>
   {{#each posts as |post|}}
     <div>
       <article class="card">
@@ -27,7 +40,7 @@
           <li class="list-group-item"> Posted By:
           {{post.username}}</li>
           <li class="list-group-item">  Created on:
-          {{post.createdAt}}</li> 
+          {{format_date post.createdAt}}</li> 
           <li class="list-group-item">Requirements:
           {{post.requirements}}</li>
           <li class="list-group-item">When:
