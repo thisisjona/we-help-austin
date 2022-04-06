@@ -171,14 +171,14 @@ hr {
 
 /* user view & post */
 
-.page-wrap {
+/* .page-wrap {
   display: flex;
   flex-wrap: wrap;
-}
+} */
 
-.post-wrap {
+/* .post-wrap {
   flex-wrap: inherit;
-}
+} */
 
 .user-post {
   box-shadow: 2px 2px 4px #000000;
@@ -319,7 +319,7 @@ hr {
 }
 /* index page css carousel */
 
-.homepage-wrapper {
+.main-wrapper {
   position: relative;
   display: flex;
   justify-content: center;
