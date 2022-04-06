@@ -161,6 +161,19 @@ hr {
   background-color: #31708e;
 }
 
+/* user view & post */
+
+.user-post {
+  box-shadow: 2px 2px 4px #000000;
+  padding: 2rem;
+}
+
+.post-title {
+  border: 1px solid #000000;
+  text-align: center;
+  padding: 1rem 0 0.5rem 0;
+}
+
 /* About us page */
 .text-center {
   text-align: center;
@@ -425,4 +438,3 @@ hr {
 .messages li:nth-child(odd) {
   background: #eee;
 }
-

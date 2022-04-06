@@ -21,10 +21,12 @@
         </div>
       </div>
 
-  <div class="card col-12 col-lg-6 col-xl-4 border-light" style="width: 18rem;">
+  <div class="card col-12 col-lg-6 col-xl-4 border-light user-post" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Title: {{post.title}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Post Id: {{post.id}}</h6>
+    <div class="post-title">
+      <h5 class="card-title">Title: {{post.title}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Post Id: {{post.id}}</h6>
+    </div>
     <p class="card-text">{{post.body}}</p>
     <h6 class="card-text">Created By: {{post.username}}</h6>
     <h6 class="card-subtitle mb-2 text-muted"></h6>
@@ -36,7 +38,7 @@
         <h6 class="card-subtitle mb-2 text-muted"></h6>
         <button id='update-btn' class='btn btn-primary log-sign' type='submit'>I Want to Help</button>
     {{/if}}
-   
+
   </div>
 </div>
       </div>
