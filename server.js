@@ -37,7 +37,7 @@ const io = require('socket.io')(http, {
 });
 
 // Opening socket
-const port2 = process.env.PORT || 3000;
+// const port2 = process.env.PORT || 3000;
 io.on('connection', (socket) => {
   socket.on('user_join', (data) => {
     this.username = data;
@@ -52,9 +52,9 @@ io.on('connection', (socket) => {
     });
   });
 
-http.listen(port2, function () {
-  console.log('Server started at 3000...');
-  });
+// http.listen(port2, function () {
+//   console.log('Server started at 3000...');
+//   });
 
 //End Chat
 
