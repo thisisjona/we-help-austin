@@ -2,35 +2,38 @@
 <nav class='navbar navbar-expand-lg navbar-light nav-wrapper'>
   <div class='container-fluid nav-content'>
     {{! tree logo w/ title }}
-    <a class='navbar-brand' href='#'>
+    <a class='navbar-brand' href='/'>
       <img
         alt='tree'
         src='/images/treelogo.jpg'
         id='nav-tree'
         class='align-middle'
-      /><a href='/' id='navbar-title'>We Help Austin</a>
+      />
+      <span id='navbar-title'>We Help Austin</span>
     </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <div class='collapse navbar-collapse nav-link-wrapper' id='navbarSupportedContent'>
       <ul class="navbar-nav">
         {{#if loggedIn}}
-        <li class="nav-item">
-          <a class="nav-link" href="/dashboard">Dashboard</a>
-        </li>
-       <li class="nav-item">
-
-
-
-          <a class="nav-link" href="/profile">Profile</a>
-
-        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/profile">Profile</a>
+          </li>
+          <form action='/' class="d-lg-none">
+            <button id='logout-btn' class='btn btn-primary log-sign' type='submit'>Log Out</button>
+          </form>
         {{/if}}
       </ul>
-    </div>
-    <div class='d-grid gap-2 d-md-flex justify-content-md-end'>
+
+    <div class='d-flex gap-2 d-md-flex justify-content-md-end'>
       {{#if loggedIn}}
-      <form action='/'>
-         <button id='logout-btn' class='btn btn-primary log-sign' type='submit'>Log Out</button>
-      </form>
+        <form action='/' class="d-none d-lg-block">
+          <button id='logout-btn' class='btn btn-primary log-sign' type='submit'>Log Out</button>
+        </form>
       {{else}}
       <form action='/login' />
          <button class='btn btn-primary log-sign' type='submit'>Log In</button>
@@ -40,6 +43,9 @@
       </form>
       {{/if}}
     </div>
+    </div>
+
+
   </div>
 </nav>
 {{! NAVBAR - END }}
