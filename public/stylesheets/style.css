@@ -94,6 +94,7 @@ a:hover {
     font-size: 3rem;
   }
 }
+
 /* END OF NAV */
 
 /* FOOTER STYLES */
@@ -136,12 +137,12 @@ ul {
   font-size: 0.8rem;
 }
 
-ul > li {
+ul>li {
   padding: 4px;
   text-decoration: none;
 }
 
-ul > li:hover {
+ul>li:hover {
   text-decoration: none;
 }
 
@@ -149,12 +150,12 @@ hr {
   border-width: 3px;
 }
 
-.social > i {
+.social>i {
   padding: 1%;
   font-size: 1.5rem;
 }
 
-.social > i:hover {
+.social>i:hover {
   color: #8fc1e3;
   cursor: pointer;
 }
@@ -167,7 +168,7 @@ hr {
   font-size: 0.7rem;
 }
 
-.policy > div {
+.policy>div {
   padding: 4px;
   font-size: 0.8rem;
 }
@@ -220,6 +221,7 @@ hr {
 .text-center {
   text-align: center;
 }
+
 .about-content {
   background-color: white;
   transition: all 0.25s ease;
@@ -366,6 +368,7 @@ hr {
     margin: 5rem auto 4rem;
   }
 }
+
 /* end carousel */
 
 /* user-view/post */
@@ -433,59 +436,73 @@ hr {
   animation: animate 15s linear infinite;
   animation-delay: -7s;
 }
+
 .fallingLeaves .set div:nth-child(2) {
   left: 50%;
   animation: animate 20s linear infinite;
   animation-delay: -5s;
 }
+
 .fallingLeaves .set div:nth-child(3) {
   left: 70%;
   animation: animate 20s linear infinite;
   animation-delay: 0s;
 }
+
 .fallingLeaves .set div:nth-child(4) {
   left: 0%;
   animation: animate 15s linear infinite;
   animation-delay: -5s;
 }
+
 .fallingLeaves .set div:nth-child(5) {
   left: 0%;
   animation: animate 12s linear infinite;
 }
+
 .fallingLeaves .set div:nth-child(6) {
   left: 0%;
   animation: animate 15s linear infinite;
   animation-delay: -5s;
 }
+
 .fallingLeaves .set div:nth-child(7) {
   left: 15%;
   animation: animate 14s linear infinite;
 }
+
 .fallingLeaves .set div:nth-child(8) {
   left: 60%;
   animation: animate 15s linear infinite;
 }
+
 @keyframes animate {
   0% {
     opacity: 0;
     top: -10%;
     transform: translateX(20px) rotate(0deg);
   }
+
   10% {
     opacity: 1;
   }
+
   20% {
     transform: translateX(-20px) rotate(45deg);
   }
+
   40% {
     transform: translateX(-20px) rotate(90deg);
   }
+
   60% {
     transform: translateX(20px) rotate(180deg);
   }
+
   80% {
     transform: translateX(-20px) rotate(180deg);
   }
+
   100% {
     top: 110%;
     transform: translateX(-20px) rotate(180deg);
@@ -498,12 +515,15 @@ hr {
   padding: 0;
   margin-bottom: 3rem;
 }
+
 .messages li {
   padding: 0.5rem;
 }
+
 .messages li:nth-child(odd) {
   background: #eee;
 }
+
 /* Misc Borders and Fonts*/
 .misc-border {
   border-color: #687864;

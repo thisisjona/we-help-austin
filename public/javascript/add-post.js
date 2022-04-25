@@ -7,25 +7,26 @@ async function newPost(event) {
     const requirements = document.querySelector('#post-requirements').value.trim();
     const tag = document.querySelector('#tag').value;
 
-    if (title && body && tag){
-    const response = await fetch(`/helpPost`, {
-        method: 'post',
-        body: JSON.stringify({
-            title,
-            body,
-            deadline,
-            tag,
-            requirements
-        }),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-    .then(response => response.json())
-    .then(data => {
-        const id = data.post.id
-        document.location.replace(`/helppost/${id}`)
-    })} else {
+    if (title && body && tag) {
+        const response = await fetch(`/helpPost`, {
+            method: 'post',
+            body: JSON.stringify({
+                title,
+                body,
+                deadline,
+                tag,
+                requirements
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                const id = data.post.id
+                document.location.replace(`/helppost/${id}`)
+            })
+    } else {
         alert('Please fill out the appropriate fields')
     };
 };

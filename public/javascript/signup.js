@@ -6,7 +6,7 @@ async function signupFormHandler(event) {
     const password = document.querySelector('#password-signup').value.trim();
 
     if (username && email && password) {
-        const response = await fetch('/user/signup',{
+        const response = await fetch('/user/signup', {
             method: 'post',
             body: JSON.stringify({
                 username,
@@ -15,7 +15,7 @@ async function signupFormHandler(event) {
             }),
             headers: { 'Content-Type': 'application/json' }
         });
-        
+
         // check the response status
         if (response.ok) {
             alert('Signup was successful')

@@ -1,55 +1,50 @@
 <body>
   <hr class="bg-light">
-    <article class="container text-dark ">
-      <div class="card border-light mb-3 page-wrap">
-        <div class="row no-gutters align-items-center post-wrap">
-          <div class="col-12 col-lg-6 col-xl-8">
-            <div class="card-img p-2 rounded-xl">
-    <div>
-      {{! Google maps.  API is restricted at the highest setting so it can't be used by others. }}
-      <iframe
-        width="600"
-        height="450"
-        style="border:0"
-        loading="lazy"
-        allowfullscreen
-        referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBJBhD25Oh977iUWwe6QM84YLjGF4g8joo&q=Austin+TX"
-      >
-      </iframe>
+  <article class="container text-dark ">
+    <div class="card border-light mb-3 page-wrap">
+      <div class="row no-gutters align-items-center post-wrap">
+        <div class="col-12 col-lg-6 col-xl-8">
+          <div class="card-img p-2 rounded-xl">
+            <div>
+              {{! Google maps. API is restricted at the highest setting so it can't be used by others. }}
+              <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBJBhD25Oh977iUWwe6QM84YLjGF4g8joo&q=Austin+TX">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="card col-12 col-lg-6 col-xl-4 border-light user-post">
+          <div class="card-body">
+            <div class="post-title">
+              <h5 class="card-title help-title">{{post.title}}</h5>
+              <h6 class="card-subtitle mb-2">Post Id: {{post.id}}</h6>
+            </div>
+            <div class="post-content">
+              <p class="card-text post-text">{{post.body}}</p>
+              <h6 class="card-text"><span class="post-bold">Created By:</span> {{post.username}}</h6>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
+              <h6 class="card-text"><span class="post-bold">Deadline:</span> {{post.deadline}}</h6>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
+              <h6 class="card-text"><span class="post-bold">Requirements:</span> {{post.requirements}}</h6>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
+            </div>
+            {{#if loggedIn}}
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+            <button id='update-btn' class='btn btn-primary log-sign' type='submit'>I Want to Help</button>
+            {{/if}}
+
           </div>
         </div>
       </div>
-
-  <div class="card col-12 col-lg-6 col-xl-4 border-light user-post" >
-  <div class="card-body">
-    <div class="post-title">
-      <h5 class="card-title help-title">{{post.title}}</h5>
-      <h6 class="card-subtitle mb-2">Post Id: {{post.id}}</h6>
     </div>
-    <div class="post-content">
-      <p class="card-text post-text">{{post.body}}</p>
-      <h6 class="card-text"><span class="post-bold">Created By:</span> {{post.username}}</h6>
-      <h6 class="card-subtitle mb-2 text-muted"></h6>
-      <h6 class="card-text"><span class="post-bold">Deadline:</span> {{post.deadline}}</h6>
-      <h6 class="card-subtitle mb-2 text-muted"></h6>
-      <h6 class="card-text"><span class="post-bold">Requirements:</span> {{post.requirements}}</h6>
-      <h6 class="card-subtitle mb-2 text-muted"></h6>
-    </div>
-    {{#if loggedIn}}
-        <h6 class="card-subtitle mb-2 text-muted"></h6>
-        <button id='update-btn' class='btn btn-primary log-sign' type='submit'>I Want to Help</button>
-    {{/if}}
-
+  </article>
+  <div>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJBhD25Oh977iUWwe6QM84YLjGF4g8joo"></script>
   </div>
-</div>
-      </div>
-    </div>
-    </article>
-    <div>
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJBhD25Oh977iUWwe6QM84YLjGF4g8joo"></script>
-    </div>
-    {{#if loggedIn }}
-    <script src="../javascript/postPage.js"></script>
-    {{/if}}
+  {{#if loggedIn }}
+  <script src="../javascript/postPage.js"></script>
+  {{/if}}
 </body>

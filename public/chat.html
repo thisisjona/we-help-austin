@@ -1,59 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>Chat</title>
     <meta name="viewport" content="width=device-width, minimum-scale=1">
-  </head>
-  <body>
+</head>
+
+<body>
     <a class="nav-link" href="/dashboard">Dashboard</a>
     <ul class="messages"></ul>
-        <form>
-            <input type="text" class="input" autocomplete="off" autofocus />
-            <button>Send</button>
-        </form>
-        <!-- setting up socket.io to client -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
-        <script>
-            const form = document.querySelector("form");
-            const input = document.querySelector(".input");
-            const messages = document.querySelector(".messages");
-            const username = prompt("Please enter your username: ", "");
-            const socket = io();
+    <form>
+        <input type="text" class="input" autocomplete="off" autofocus />
+        <button>Send</button>
+    </form>
+    <!-- setting up socket.io to client -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
+    <script>
+        const form = document.querySelector("form");
+        const input = document.querySelector(".input");
+        const messages = document.querySelector(".messages");
+        const username = prompt("Please enter your username: ", "");
+        const socket = io();
 
-            form.addEventListener("submit", function(event) {
-                event.preventDefault();
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
 
-                addMessage(username + ": " + input.value);
+            addMessage(username + ": " + input.value);
 
-                socket.emit("chat_message", {
-                    message: input.value
-                });
+            socket.emit("chat_message", {
+                message: input.value
+            });
 
-                input.value = "";
-                return false;
-            }, false);
+            input.value = "";
+            return false;
+        }, false);
         // Adding client-sided listeners for events from server
-            socket.on("chat_message", function(data) {
-                addMessage(data.username + ": " + data.message);
-            });
+        socket.on("chat_message", function (data) {
+            addMessage(data.username + ": " + data.message);
+        });
         // Lets you know when a user has joined the chat
-            socket.on("user_join", function(data) {
-                addMessage(data + " joined the chat");
-            });
+        socket.on("user_join", function (data) {
+            addMessage(data + " joined the chat");
+        });
         // Lets you know when a user leaves the chat
-            socket.on("user_leave", function(data) {
-                addMessage(data + " left the chat");
-            });
+        socket.on("user_leave", function (data) {
+            addMessage(data + " left the chat");
+        });
 
-            addMessage("You have joined the chat '" + username  + "'.");
-            socket.emit("user_join", username);
+        addMessage("You have joined the chat '" + username + "'.");
+        socket.emit("user_join", username);
         // Creates the messages
-            function addMessage(message) {
-                const li = document.createElement("li");
-                li.innerHTML = message;
-                messages.appendChild(li);
-                window.scrollTo(0, document.body.scrollHeight);
-            }
-        </script>
-  </body>
+        function addMessage(message) {
+            const li = document.createElement("li");
+            li.innerHTML = message;
+            messages.appendChild(li);
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+    </script>
+</body>
+
 </html>

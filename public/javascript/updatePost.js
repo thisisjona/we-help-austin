@@ -33,12 +33,12 @@
 // link to post form
 // document.querySelector('.new-post-form').addEventListener('click', updatePost);
 const id = window.location.toString().split('/')[
-    window.location.toString().split('/').length -1];
+    window.location.toString().split('/').length - 1];
 
-async function deleteTask () {
+async function deleteTask() {
     const response = await fetch('/helpPost/', {
         method: 'delete',
-        body: JSON.stringify({id: id}),
+        body: JSON.stringify({ id: id }),
         headers: {
             'Content-Type': 'application/json'
         }
@@ -54,12 +54,12 @@ async function deleteTask () {
 
 async function taskCompleted() {
     const response = await fetch(`/helpPost/checkUser`, {
-            method: 'post',
-            body: JSON.stringify({id}),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
+        method: 'post',
+        body: JSON.stringify({ id }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
         .then(response => response.json())
         .then(data => {
             if (data.check) {
@@ -67,11 +67,11 @@ async function taskCompleted() {
             } else {
                 alert('Only the poster can close the Task!')
             }
-            });
+        });
 };
 
 document.getElementById("chat").onclick = function () {
-    location.href="/chat.html"
+    location.href = "/chat.html"
 };
 
 document.getElementById("issueClosed").addEventListener('click', taskCompleted);

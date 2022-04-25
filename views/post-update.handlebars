@@ -1,62 +1,57 @@
 <body>
   <hr class="bg-light">
-    <article class="container text-dark ">
-      <div class="card border-light mb-3 page-wrap">
-        <div class="row no-gutters align-items-center post-wrap">
-          <div class="col-12 col-lg-6 col-xl-8">
-            <div class="card-img p-2 rounded-xl">
-    <div>
-      {{! Google maps.  API is restricted at the highest setting so it can't be used by others. }}
-      <iframe
-        width="600"
-        height="450"
-        style="border:0"
-        loading="lazy"
-        allowfullscreen
-        referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBJBhD25Oh977iUWwe6QM84YLjGF4g8joo&q=Austin+TX"
-      >
-      </iframe>
+  <article class="container text-dark ">
+    <div class="card border-light mb-3 page-wrap">
+      <div class="row no-gutters align-items-center post-wrap">
+        <div class="col-12 col-lg-6 col-xl-8">
+          <div class="card-img p-2 rounded-xl">
+            <div>
+              {{! Google maps. API is restricted at the highest setting so it can't be used by others. }}
+              <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBJBhD25Oh977iUWwe6QM84YLjGF4g8joo&q=Austin+TX">
+              </iframe>
+            </div>
           </div>
         </div>
-      </div>
 
-  <div class="card col-12 col-lg-6 col-xl-4 border-light user-post">
-  <div class="card-body">
-    <div class="post-title help-title">
-      <h5 class="card-title">{{post.title}}</h5>
-      <h6 class="card-subtitle mb-2">Post Id: {{post.id}}</h6>
-    </div>
-    <div class="post-content">
-      <p class="card-text">{{post.body}}</p>
-      <h6 class="card-text">Created By: {{post.username}}</h6>
-      <h6 class="card-subtitle mb-2 text-muted"></h6>
-      <h6 class="card-text">Deadline: {{post.deadline}}</h6>
-      <h6 class="card-subtitle mb-2 text-muted"></h6>
-      <h6 class="card-text">Requirements: {{post.requirements}}</h6>
-      <h6 class="card-subtitle mb-2 text-muted"></h6>
-    </div>
-    {{#if loggedIn}}
-      <div>
-            <button id="issueClosed" class="btn btn-primary log-sign">Task Completed</button>
+        <div class="card col-12 col-lg-6 col-xl-4 border-light user-post">
+          <div class="card-body">
+            <div class="post-title help-title">
+              <h5 class="card-title">{{post.title}}</h5>
+              <h6 class="card-subtitle mb-2">Post Id: {{post.id}}</h6>
+            </div>
+            <div class="post-content">
+              <p class="card-text">{{post.body}}</p>
+              <h6 class="card-text">Created By: {{post.username}}</h6>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
+              <h6 class="card-text">Deadline: {{post.deadline}}</h6>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
+              <h6 class="card-text">Requirements: {{post.requirements}}</h6>
+              <h6 class="card-subtitle mb-2 text-muted"></h6>
+            </div>
+            {{#if loggedIn}}
+            <div>
+              <button id="issueClosed" class="btn btn-primary log-sign">Task Completed</button>
+            </div>
+            </script>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+            <button id="chat" class="btn btn-primary log-sign">Click to Chat</button>
           </div>
-</script>
-<h6 class="card-subtitle mb-2 text-muted"></h6>
-<h6 class="card-subtitle mb-2 text-muted"></h6>
-<button id="chat" class="btn btn-primary log-sign">Click to Chat</button>
-          </div>
-    {{/if}}
-  </div>
-</div>
+          {{/if}}
+        </div>
       </div>
     </div>
-  </div>
-</div>
-    </article>
-    {{#if loggedIn }}
-    <script src="../../javascript/updatePost.js"></script>
-    {{/if}}
-    <div>
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJBhD25Oh977iUWwe6QM84YLjGF4g8joo"></script>
     </div>
-  </body>
+    </div>
+    </div>
+  </article>
+  {{#if loggedIn }}
+  <script src="../../javascript/updatePost.js"></script>
+  {{/if}}
+  <div>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJBhD25Oh977iUWwe6QM84YLjGF4g8joo"></script>
+  </div>
+</body>

@@ -15,7 +15,7 @@ const sess = {
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
-      db: sequelize
+    db: sequelize
   })
 };
 
@@ -45,12 +45,12 @@ io.on('connection', (socket) => {
   });
   socket.on('chat_message', (data) => {
     data.username = this.username;
-    socket.broadcast.emit('chat_message', data) 
-    });
-    socket.on('disconnect', () => {
-      socket.broadcast.emit('user_disconnected', this.username);
-    });
+    socket.broadcast.emit('chat_message', data)
   });
+  socket.on('disconnect', () => {
+    socket.broadcast.emit('user_disconnected', this.username);
+  });
+});
 
 // http.listen(port2, function () {
 //   console.log('Server started at 3000...');
